@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit page for "<%= oneMovie.title %>"</h1>
+
+    <hr>
+
+    <form method="/movies/:dataId/<%=oneMove._id%>?_method=PUT" action=POST>
+
+        <label for="title">Title:</label>
+        <input name = "title" type="text" name="" id="">
+        <br>
+        <label for="Director">Director:</label>
+        <input type="director" name="" id="">
+        <br>
+        <label for="release-date">Release Date:</label>
+        <input type="release-date" name="" id="">
+        <br>
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
