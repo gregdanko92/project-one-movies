@@ -7,7 +7,7 @@ const movieSchema = new mongoose.Schema({
     title: { type:String, required: true}, //required
     director: { type: String},
     genre: { type: String},
-    arr: [{type:String}], 
+    actors: [{type:String}], 
     releaseDate: {type: Number},     
 })
 /* ------------------------------ Create model ------------------------------ */

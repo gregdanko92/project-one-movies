@@ -11,16 +11,16 @@
 
     <hr>
 
-    <form method="/movies/:dataId/<%=oneMove._id%>?_method=PUT" action=POST>
-
+    <form action="/movies/<%= oneMovie._id%>?_method=PUT" method="POST">
+        <!-- ------------------- ?_method=DELETE" method="POST"> ------------------- -->
         <label for="title">Title:</label>
         <input name = "title" type="text" name="" id="">
         <br>
         <label for="Director">Director:</label>
         <input type="director" name="" id="">
         <br>
-        <label for="release-date">Release Date:</label>
-        <input type="release-date" name="" id="">
+        <label for="releaseDate">Release Date:</label>
+        <input type="releaseDate" name="" id="">
         <br>
         <input type="submit">
     </form>
