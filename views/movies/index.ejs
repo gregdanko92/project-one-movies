@@ -13,7 +13,7 @@
     <%- include('../partials/navbar.ejs') %>
     <% for(let i = 0; i < allMovies.length; i++) { %>
         <a href="/movies/<%= allMovies[i]._id  %>">
-            <h2><%= allMovies[i].title %></h2>
+            <h2><%= allMovies[i].title %></h2> 
         </a>
         <h2><%=allMovies[i].director%></h2>
         <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">

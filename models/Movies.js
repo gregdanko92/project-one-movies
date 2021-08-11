@@ -4,6 +4,7 @@
 const mongoose = require('mongoose');
 /* ------------------------------ define schema ----------------------------- */
 const movieSchema = new mongoose.Schema({
+
     Title: { type:String, required: true}, //required
     Director: { type: String},
     Writer: {type: String},
@@ -32,6 +33,8 @@ const movieSchema = new mongoose.Schema({
     Production: {type: String},
     Website: {type: String},
     Response: {type: String}
+   
+
 })
 /* ------------------------------ Create model ------------------------------ */
 const Movies = mongoose.model('Movies',movieSchema)
