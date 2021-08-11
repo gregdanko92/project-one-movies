@@ -5,6 +5,10 @@ const express = require('express');
 const db = require('../models/index.js')
 const router = express.Router();
 
+const api = process.env.apiKey
+const axios = require('axios')
+
+
 
 /* ---------------------------------- index --------------------------------- */
 router.get('/', (req, res) => { 
@@ -21,21 +25,22 @@ router.get('/new', (req, res) => { //get url path
   }) 
 /* --------------------------------- create --------------------------------- */
 router.post('/', (req, res) => { 
-  /* let searchTerm = req.body.title
-  const searchTitle = "https://www.omdbapi.com/?s="+searchTerm+"&apikey="+api
+
+  let searchTerm = req.body.Title
+  const searchTitle = "https://www.omdbapi.com/?t="+searchTerm+"&apikey="+api
   axios.get(searchTitle)
   .then((data) => {
-      temp = data.data.Search
-      res.redirect('/search/results')
-  }) */
-
-    db.Movies.create(req.body, (err, createMovie) => { //create new obj in our database with form data
-      if (err) {return console.log(err)}
-      else{
-          res.redirect('/movies') //redirect on success back to index page
-      }  
-    });
+      let temp = data.data
+      console.log(`here is the data ${temp}`)
+      db.Movies.findOneAndUpdate(temp, (err, createMovie) => { //create new obj in our database with form data
+        if (err) {return console.log(err)}
+        else{
+            console.log(createMovie)
+            res.redirect('/movies') //redirect on success back to index page
+        }  
+      });
   })
+})
   
 /* ---------------------------------- show ---------------------------------- */
 router.get('/:dataId', (req, res) => { // grab id from url

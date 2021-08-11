@@ -20,9 +20,14 @@
             
         <p>Title: <%=searchResults[i].Title%></p>
         <p>Year: <%=searchResults[i].Year%></p>
+        <p>Director: <%=searchResults[i].Director%></p>
         <img src="<%=searchResults[i].Poster%>" alt="">
         <form action="/movies" method="POST">
             <input name="Title" type="hidden" value="<%=searchResults[i].Title%>">
+            <input name="Year" type="hidden" value="<%=searchResults[i].Year%>">
+            <input name="Type" type="hidden" value="<%=searchResults[i].Type%>">
+            <input name="Poster" type="hidden" value="<%=searchResults[i].Poster%>">
+            
             <input type="submit" value="Add to Watchlist">
         </form>    
     <% } %>

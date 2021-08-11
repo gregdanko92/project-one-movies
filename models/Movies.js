@@ -5,12 +5,12 @@ const mongoose = require('mongoose');
 /* ------------------------------ define schema ----------------------------- */
 const movieSchema = new mongoose.Schema({
 
-    Title: { type:String, required: true}, //required
+    Title: { type:String}, //required
     Director: { type: String},
     Writer: {type: String},
     Genre: { type: String},
     Actors: [{type:String}], 
-    Released: {type: Number},
+    Released: {type: String},
     Rated: {type: String},
     Runtime: {type: String},
     Language: {type: String},
