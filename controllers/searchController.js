@@ -5,6 +5,7 @@ const axios = require('axios')
 let temp ={}
 
 
+
 /* --------------------------------- search --------------------------------- */
 router.get('/', (req, res) => {    
     res.render("./search/search.ejs")    
@@ -12,12 +13,17 @@ router.get('/', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    let searchTerm = req.body.title
+    let searchTerm = req.body.search
     const searchTitle = "https://www.omdbapi.com/?s="+searchTerm+"&apikey="+api
+    console.log(searchTitle)
     axios.get(searchTitle)
     .then((data) => {
         temp = data.data.Search
-        res.redirect('/search/results')
+        console.log(temp)
+        if (data.data.Response === 'False') {
+            res.send(data.data.Error)
+        } else {res.redirect('/search/results')}
+        
     })
 })
 
