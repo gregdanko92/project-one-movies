@@ -15,15 +15,15 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     let searchTerm = req.body.search
     const searchTitle = "https://www.omdbapi.com/?s="+searchTerm+"&apikey="+api
-    console.log(searchTitle)
     axios.get(searchTitle)
     .then((data) => {
-        console.log(temp)
         temp = data.data.Search
-        console.log(temp)
         if (data.data.Response === 'False') {
             res.send(data.data.Error)
-        } else {res.redirect('/search/results')}
+        }
+         else {
+             res.redirect('/search/results')
+            }
         
     })
 })
