@@ -4,6 +4,7 @@
 const express = require('express')         
 const methodOverride = require('method-override');
 const rowdy = require('rowdy-logger')
+const dotenv = require('dotenv').config()
 const moviesController = require('./controllers/moviesController.js');
 /* ------------------------------ Set Variables ----------------------------- */
 const app = express() 
@@ -18,7 +19,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs'); // changes express default view engine to ejs
 /* ------------------------------- Set Routes ------------------------------- */
 app.get('/', (req, res) => {
-    res.send('Movies Homepage');
+    res.render('homepage.ejs');
 })
 /* ------------------------------ Start Server ------------------------------ */
 app.listen(port, () => {
