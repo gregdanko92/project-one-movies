@@ -18,13 +18,13 @@
                   <h3 class="heading">Movie Watchlists</h3>
                   <p>Store your watchlists here.</p>
                   <footer>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="d-flex" method="POST" action="/search">
+                        <label for="title"></label>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="title">
                         <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
+                    </form>
                   </footer>
-                </article>
-                
+                </article>                
               </div>
         </div>
     </div>
