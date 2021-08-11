@@ -39,9 +39,11 @@ router.post('/', (req, res) => {
             res.redirect('/movies') //redirect on success back to index page
         }  
       });
+  }).catch((err)=>{
+    console.log(err)
   })
 })
-  
+  //changing line 35 from findOneAndUpdate back to create, looks like that worked. 
 /* ---------------------------------- show ---------------------------------- */
 router.get('/:dataId', (req, res) => { // grab id from url
     db.Movies.findById(req.params.dataId, (err, foundMovie) => { //find obj with unique Id from database
