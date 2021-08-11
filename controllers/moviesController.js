@@ -61,7 +61,6 @@ router.delete('/:dataId', (req, res) => { //grab id from url
       res.redirect('/movies'); //redirect to index page
     })
   })
-  
 
 /* --------------------------------- Export --------------------------------- */
 module.exports = router;
