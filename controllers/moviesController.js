@@ -21,6 +21,14 @@ router.get('/new', (req, res) => { //get url path
   }) 
 /* --------------------------------- create --------------------------------- */
 router.post('/', (req, res) => { 
+  /* let searchTerm = req.body.title
+  const searchTitle = "https://www.omdbapi.com/?s="+searchTerm+"&apikey="+api
+  axios.get(searchTitle)
+  .then((data) => {
+      temp = data.data.Search
+      res.redirect('/search/results')
+  }) */
+
     db.Movies.create(req.body, (err, createMovie) => { //create new obj in our database with form data
       if (err) {return console.log(err)}
       else{
