@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= movie.title %></title>
+    <title><%= oneMovie.title %></title>
 </head>
 <body>
-    <h1> Info page for <%= oneMovie.title </h1>
+  
     
     <main>
+        <%- include('../partials/navbar.ejs') %>
+        <h1> Info page for <%= oneMovie.title%> </h1>
         <section>
-            <h2><%= oneMovie.name</h2>
+            <h2><%= oneMovie.title %></h2>
                 <ul>
                     <li>Title: <%= oneMovie.title %></li>
                     <li>Director: <%= oneMovie.director %></li>
                     <li>Genre: <%= oneMovie.genre %></li>
-                    <li>Arr: <%= oneMovie.arr %></li>
+                    <li>Actors: <%= oneMovie.actors %></li>
                     <li>Release Date: <%= oneMovie.releaseDate %></li>
                 </ul>
         </section>
