@@ -31,15 +31,21 @@ router.post('/', (req, res) => {
   axios.get(searchTitle)
   .then((data) => {
       let temp = data.data
-      console.log(`here is the data ${temp}`)
-      db.Movies.findOneAndUpdate(temp, (err, createMovie) => { //create new obj in our database with form data
-        if (err) {return console.log(err)}
+      db.Movies.findOne({imdbID: temp.imdbID},(err,foundMovie)=>{
+        if(err) return console.log(err)
+        if(foundMovie){
+            res.send("this already exists")
+        }
         else{
-            console.log(createMovie)
-            res.redirect('/movies') //redirect on success back to index page
-        }  
-      });
+          db.Movies.create(temp,(err,createdMovie)=>{
+            if(err) return console.log(err)
+              res.send('created movie')
+              res.redirect('/movies')
+          })
+        }
+      })      
   }).catch((err)=>{
+    console.log("this is error")
     console.log(err)
   })
 })
