@@ -2,7 +2,7 @@ const express = require('express');
 const api = process.env.apiKey
 const router = express.Router();
 const axios = require('axios')
-
+let temp ={}
 
 
 /* --------------------------------- search --------------------------------- */
@@ -16,8 +16,17 @@ router.post('/', (req, res) => {
     const searchTitle = "https://www.omdbapi.com/?s="+searchTerm+"&apikey="+api
     axios.get(searchTitle)
     .then((data) => {
-        console.log(data.data.Search)
+        temp = data.data.Search
+        res.redirect('/search/results')
     })
 })
 
+router.get('/results', (req, res) => { 
+    res.render('./search/searchResults.ejs', { searchResults:temp }) 
+    
+})
+
+
 module.exports = router
+
+
