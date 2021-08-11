@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 const express = require('express')         
 const methodOverride = require('method-override');
+const doten = require('dotenv').config()
 const rowdy = require('rowdy-logger')
 const dotenv = require('dotenv').config()
 const moviesController = require('./controllers/moviesController.js');
