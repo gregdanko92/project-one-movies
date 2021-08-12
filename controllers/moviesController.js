@@ -39,6 +39,7 @@ router.post('/', (req, res) => {
         else{
           db.Movies.create(temp,(err,createdMovie)=>{
             if(err) return console.log(err)
+              // res.send('created movie')
               res.redirect('/movies')
           })
         }
@@ -48,7 +49,6 @@ router.post('/', (req, res) => {
     console.log(err)
   })
 })
-  
 /* ---------------------------------- show ---------------------------------- */
 router.get('/:dataId', (req, res) => { // grab id from url
     db.Movies.findById(req.params.dataId, (err, foundMovie) => { //find obj with unique Id from database

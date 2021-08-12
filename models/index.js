@@ -19,6 +19,7 @@ mongoose.connection.on('connected', () => {
   mongoose.connection.on("error", (err) => {
     console.log("Could not connect to MongoDB!", err);
   });
+
 /* --------------------------- Export data modules -------------------------- */
 module.exports = {
     Movies: require('./Movies.js')
