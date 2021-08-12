@@ -10,24 +10,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header-container">
-        <%- include('./partials/navbar.ejs') %>
-        <div class="title-search">
-            <div id="title" >                 
-                <article>
-                  <h3 class="heading">Movie Watchlists</h3>
-                  <p>Store your watchlists here.</p>
-                  <footer>
-                    <form class="d-flex" method="POST" action="/search">
-                        <label for="search"></label>
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </footer>
-                </article>                
-              </div>
+  <div class="bg overlay" id="header-overlay">
+    <div class="wrapper row1">
+      <div class="header-container hoc">
+        <div class="logo fl-left">
+          <h1>Title</h1>
         </div>
+        <%- include('./partials/navbar.ejs') %>
+      </div>
     </div>
+      
+    <div class="pageintro">               
+      <article>
+        <h3 class="heading">Movie Watchlists</h3>
+        <p>Store your watchlists here.</p>
+          <footer>
+            <form class="d-flex" method="POST" action="/search">
+              <label for="search"></label>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+              <button class="btn btn-outline-success home-search" type="submit">Search</button>
+            </form>
+          </footer>
+      </article>                
+    </div>
+
+  </div>
+  
     <div class="movie-slides-container">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">

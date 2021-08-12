@@ -3,6 +3,73 @@
     max-width: 600px;
     max-height: 600px;
 }
-body{
-    color:blue
+.bg{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div{
+    display:block;
+}
+.overlay{
+    position: relative;
+    z-index: 1;
+}
+#header-overlay{
+    background-image: url(https://www.splitshire.com/wp-content/uploads/2015/04/SplitShire-8881.jpg);
+}
+
+.wrapper{
+    display:block;
+    position:relative;
+    width:100%;
+    margin:0;
+    padding:0;
+    text-align:left;
+    word-wrap:break-word;
+}
+.row1{padding:80px 0 0 0;}
+
+.header-container{
+    border-color: rgba(255,255,255,.2);
+    padding: 0 15px;
+    border: solid;
+    border-width: 1px 0;
+    
+}
+.header-container, .logo{
+    margin: 28px 0 0 0;
+}
+.pageintro{
+    padding:180px 0
+}
+.hoc{
+    display:block;  
+    margin:0 auto;
+    max-width: 1140px;
+}
+
+.fl-right{
+    float: right;
+}
+.fl-left{
+    float:left;
+}
+article{
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading{
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+form {
+    display: block;
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
 }
