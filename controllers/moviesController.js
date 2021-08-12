@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
         else{
           db.Movies.create(temp,(err,createdMovie)=>{
             if(err) return console.log(err)
-              res.send('created movie')
+              // res.send('created movie')
               res.redirect('/movies')
           })
         }
@@ -49,7 +49,6 @@ router.post('/', (req, res) => {
     console.log(err)
   })
 })
-  //changing line 35 from findOneAndUpdate back to create, looks like that worked. 
 /* ---------------------------------- show ---------------------------------- */
 router.get('/:dataId', (req, res) => { // grab id from url
     db.Movies.findById(req.params.dataId, (err, foundMovie) => { //find obj with unique Id from database
