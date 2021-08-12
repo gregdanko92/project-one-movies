@@ -34,12 +34,11 @@ router.post('/', (req, res) => {
       db.Movies.findOne({imdbID: temp.imdbID},(err,foundMovie)=>{
         if(err) return console.log(err)
         if(foundMovie){
-            res.send("this already exists")
+            res.send("this already exists") //alert
         }
         else{
           db.Movies.create(temp,(err,createdMovie)=>{
             if(err) return console.log(err)
-              res.send('created movie')
               res.redirect('/movies')
           })
         }
