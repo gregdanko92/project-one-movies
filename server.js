@@ -3,7 +3,6 @@
 /* -------------------------------------------------------------------------- */
 const express = require('express')         
 const methodOverride = require('method-override');
-const doten = require('dotenv').config()
 const rowdy = require('rowdy-logger')
 const dotenv = require('dotenv').config()
 const moviesController = require('./controllers/moviesController.js');
@@ -25,7 +24,7 @@ app.get('/', (req, res) => {
     res.render('homepage.ejs');
 })
 /* ------------------------------ Start Server ------------------------------ */
-app.listen(port, () => {
+app.listen(process.env.port || 4000, () => {
     console.log(`Example app listening at http://localhost:${port}`);
     rowdyResults.print()
 });

@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 /* ------------------------ Create connection string ------------------------ */
 const connectionString = 'mongodb://localhost:27017/moviedb';
 /* ------------------ connect and hide deprecation warnings ----------------- */
-mongoose.connect(connectionString, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -13,7 +13,7 @@ mongoose.connect(connectionString, {
     });
 /* --------------- Listen for connection and callback function -------------- */
 mongoose.connection.on('connected', () => {
-    console.log(`Mongoose connected to ${connectionString} 🥭`);
+    console.log(`Mongoose connected to ${mongoose.connection.host}:${mongoose.connection.port} 🥭`);
 });
 
 /* --------------------------- Export data modules -------------------------- */
