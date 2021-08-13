@@ -4,13 +4,6 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 .wrapper{display:block;position:relative;width:100%;margin:0;padding:0;text-align:left;}
 /* center horizontal */
 .horizontal{display:block;margin:0 auto;}
-/* rows */
-.row0{padding:80px 0 0 0;}
-
-/* header */
-#header-container{color:white;padding:0 15px; border:solid; border-width:1px 0; max-width: 1140px; min-height: 4rem;}
-#header-container #logo{margin:14px 0 0 0;}
-#header-container #logo h1{margin:0; padding:0; font-size:22px; line-height:1; text-transform:uppercase;}
 /* title */
 #pageintro{padding:140px 0}
 #pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
@@ -89,9 +82,7 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 .row3{background-color:#FFFFFF;}
 .row4{background-color:#323639;}
 
-/* Header */
-#header{border-color:white;}
-#header #logo h1 a{color:inherit;}
+
 
 
 /* Page Intro */
