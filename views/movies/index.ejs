@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
     <script defer src="js/app.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <%- include('../partials/navbar.ejs') %>
-    <% for(let i = 0; i < allMovies.length; i++) { %>
-        <a href="/movies/<%= allMovies[i]._id  %>">
-            <h2><%= allMovies[i].Title %></h2> 
-        </a>
-        <img src="<%=allMovies[i].Poster%>" alt="">
+        <div id="moviesGrid">
+            <% for(let i=0; i < allMovies.length; i++) { %>
+                <div id="moviesSolo">
+                    <a href="/movies/<%= allMovies[i]._id  %>">
+                        <h2>
+                            <%= allMovies[i].Title %>
+                        </h2>
+                    </a>
+                    <div>
+                    <img src="<%=allMovies[i].Poster%>" alt="">
+                    </div>
+                    <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete this movie">
+                    </form>
+                    <a href="/movies/<%= allMovies[i]._id  %>/edit">Edit this movie</a>
+                </div>
 
-        <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete this movies">
-        </form>
-        <a href="/movies/<%= allMovies[i]._id  %>/edit">Edit this movie</a>     
-
-    <% } %>
+                <% } %>
+        </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>   
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+            integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+            integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
