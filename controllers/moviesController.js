@@ -4,7 +4,7 @@
 const express = require('express');
 const db = require('../models/index.js')
 const router = express.Router();
-
+const ytApi = process.env.apiYT
 const api = process.env.apiKey
 const axios = require('axios')
 
@@ -53,7 +53,12 @@ router.post('/', (req, res) => {
 router.get('/:dataId', (req, res) => { // grab id from url
     db.Movies.findById(req.params.dataId, (err, foundMovie) => { //find obj with unique Id from database
       if(err) return console.log(err);
-      res.render('./movies/show.ejs', { oneMovie: foundMovie }) //pass that obj to our show.ejs page and render it
+      const youtubeURL = "https://www.googleapis.com/youtube/v3/search?q="+foundMovie.Title+"+trailer&key="+ytApi
+      axios.get(youtubeURL).then((data)=>{
+        let ytID = data.data.items[0].id.videoId  
+        res.render('./movies/show.ejs', { oneMovie: foundMovie, ytID:ytID })
+      })
+       //pass that obj to our show.ejs page and render it
     })  
   })
   
