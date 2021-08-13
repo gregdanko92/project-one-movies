@@ -38,10 +38,16 @@ margin-bottom: 1rem;
     width: 60%;
     align-content: space-between;
 }
+.poster{
+    height:390px;
+}
 .content-container{
     margin:20px auto;
     display:flex;
     width: 60%;
     align-content: space-between;
     flex-direction: column;
+}
+.plot{
+    padding-right: 30%;
 }
