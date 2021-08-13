@@ -7,6 +7,7 @@ const rowdy = require('rowdy-logger')
 const dotenv = require('dotenv').config()
 const moviesController = require('./controllers/moviesController.js');
 const searchController = require('./controllers/searchController');
+const exampleMovies = require('./models/exampleMovies.js')
 /* ------------------------------ Set Variables ----------------------------- */
 const app = express() 
 const port = 4000
@@ -21,7 +22,8 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs'); // changes express default view engine to ejs
 /* ------------------------------- Set Routes ------------------------------- */
 app.get('/', (req, res) => {
-    res.render('homepage.ejs');
+    
+    res.render('homepage.ejs', {exampleMovies: exampleMovies});
 })
 /* ------------------------------ Start Server ------------------------------ */
 app.listen(process.env.PORT || 4000, () => {

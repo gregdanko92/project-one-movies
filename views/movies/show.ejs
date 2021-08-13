@@ -14,6 +14,42 @@
   </title>
 </head>
 <body>
+<<<<<<< HEAD
+  
+    
+    <main>
+        <%- include('../partials/navbar.ejs') %>
+        <section>
+            <h2><%= oneMovie.Title %></h2>
+                <ul>
+                    <li>Title: <%= oneMovie.Title %></li>
+                    <li>Director: <%= oneMovie.Director %></li>
+                    <li>Genre: <%= oneMovie.Genre %></li>
+                    <li>Actors: <%= oneMovie.Actors %></li>
+                    <li>Rotten Tomatoes: <%= oneMovie.Ratings[1].Value %> </li>
+                    <li>
+                        <button type="button" class="collapsible">Details</button>
+                        <div class="content">
+                        <ul>
+                            <li>Rated: <%= oneMovie.Rated %> </li>
+                            <li>Year: <%= oneMovie.Released %> </li>
+                            <li>Runtime: <%= oneMovie.Runtime %> </li>
+                            <li>Awards: <%= oneMovie.Awards %> </li>
+                            <li>Country: <%= oneMovie.Country %> </li>
+                            <li>IMDB Rating: <%= oneMovie.Ratings[0].Value %> </li>
+                            <li>Metacritic: <%= oneMovie.Ratings[2].Value %> </li>
+
+
+
+                        </ul>
+                        </div>
+                    </li>
+
+                </ul>
+
+                
+                <img src="<%= oneMovie.Poster %>" alt="">
+=======
   <main>
     <%- include('../partials/navbar.ejs') %>
     <section>
@@ -146,6 +182,7 @@
       </div>
     </li>
   </ul> -->
+>>>>>>> df2b46244c9fcb503945f250cf9f9fc6eab6bc96
 
   </main>
 

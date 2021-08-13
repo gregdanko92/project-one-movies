@@ -73,9 +73,10 @@
           <div class="row">
             <div class="col-md-4">
               <div class="thumbnail">
-                <a href="">
-                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
-                </a>
+                  <img src= <%=exampleMovies[0].Poster %> class="img-rounded rounded">
+                  <form action="/movies" method="post">
+                    <input type="submit" value="Add to Watchlist">
+                  </form>
               </div>
             </div>
             <div class="col-md-4">
@@ -97,7 +98,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="">
-                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                  <img src= <%= exampleMovies[0].Poster %>  class="img-rounded rounded">
                 </a>
               </div>
             </div>
