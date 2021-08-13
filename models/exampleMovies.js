@@ -1,44 +1,45 @@
 exampleMovies = [
     {
-        Title: "The Godfather",
-        Year: "1972",
+        Title: "There Will Be Blood",
+        Year: "2007",
         Rated: "R",
-        Released: "24 Mar 1972",
-        Runtime: "175 min",
-        Genre: "Crime, Drama",
-        Director: "Francis Ford Coppola",
-        Writer: "Mario Puzo, Francis Ford Coppola",
-        Actors: "Marlon Brando, Al Pacino, James Caan",
-        Plot: "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
-        Language: "English, Italian, Latin",
+        Released: "25 Jan 2008",
+        Runtime: "158 min",
+        Genre: "Drama",
+        Director: "Paul Thomas Anderson",
+        Writer: "Paul Thomas Anderson, Upton Sinclair",
+        Actors: "Daniel Day-Lewis, Paul Dano, Ciarán Hinds",
+        Plot: "A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.",
+        Language: "English, American Sign ",
         Country: "United States",
-        Awards: "Won 3 Oscars. 31 wins & 30 nominations total",
-        Poster: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+        Awards: "Won 2 Oscars. 116 wins & 137 nominations total",
+        Poster: "https://m.media-amazon.com/images/M/MV5BMjAxODQ4MDU5NV5BMl5BanBnXkFtZTcwMDU4MjU1MQ@@._V1_SX300.jpg",
         Ratings: [
             {
             Source: "Internet Movie Database",
-            Value: "9.2/10"
+            Value: "8.2/10"
             },
             {
             Source: "Rotten Tomatoes",
-            Value: "97%"
+            Value: "91%"
             },
             {
             Source: "Metacritic",
-            Value: "100/100"
+            Value: "93/100"
             }
         ],
-        Metascore: "100",
-        imdbRating: "9.2",
-        imdbVotes: "1,675,066",
-        imdbID: "tt0068646",
+        Metascore: "93",
+        imdbRating: "8.2",
+        imdbVotes: "536,330",
+        imdbID: "tt0469494",
         Type: "movie",
         DVD: "01 Aug 2013",
-        BoxOffice: "$134,966,411",
-        Production: "Paramount Pictures",
+        BoxOffice: "$40,222,514",
+        Production: "Paramount Vantage, Miramax Films, Scott Rudin Productions, Ghoulardi Film Company",
         Website: "N/A",
         Response: "True"
-    },
+        }
+    ,
     {
         Title: "Du rififi chez les hommes",
         Year: "1955",
