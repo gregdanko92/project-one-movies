@@ -6,15 +6,16 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 .horizontal{display:block;margin:0 auto;}
 /* rows */
 .row0{padding:80px 0 0 0;}
+
 /* header */
-#header-container{padding:0 15px; border:solid; border-width:1px 0; max-width: 1140px; min-height: 4rem;}
+#header-container{color:white;padding:0 15px; border:solid; border-width:1px 0; max-width: 1140px; min-height: 4rem;}
 #header-container #logo{margin:14px 0 0 0;}
 #header-container #logo h1{margin:0; padding:0; font-size:22px; line-height:1; text-transform:uppercase;}
 /* title */
-#pageintro{padding:180px 0}
+#pageintro{padding:140px 0}
 #pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
-#pageintro .heading{margin-bottom:20px; font-size:4rem;}
-#pageintro p{max-width:75%; margin:0 auto;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem; font-weight: bold; }
+#pageintro p{max-width:75%; margin:0 auto;} 
 #pageintro footer{margin-top:50px;}
 #pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
 #pageintro footer input, #pageintro footer button{display:block; height:44px;}
@@ -28,9 +29,11 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
     border-color: gray;
     color: gray;
 }
-
-.movie-slides-title{display:block; max-width:55%; margin:0 auto;margin-top: 5rem; text-align:center;}
-.movie-slides-title .heading{margin:0; padding:0; line-height:1;}
+.row1{
+    padding-bottom: 20px;
+}
+.section-title{display:block; max-width:55%; margin:0 auto;margin-top: 5rem; text-align:center;}
+.section-title .heading{margin:0; padding:0; line-height:1;}
 .movie-slides-container{
     margin:0 auto;
     position: relative;
@@ -39,6 +42,26 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
     padding-bottom: 20%;
     
 }
+.top-buffer { margin-top:20px; }
+#recommendations{padding:20px 0;}
+.img-grid{
+    max-width:40%;
+    margin:0 auto;
+    
+}
+.img-rounded{
+    width: 100%
+}
+.footer-search{
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-social{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 .bg{
     background-position: top center;
     background-repeat: no-repeat;
@@ -50,7 +73,7 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
     z-index: 1;
 }
 #header-overlay{
-    background-image: url(https://www.splitshire.com/wp-content/uploads/2015/04/SplitShire-8881.jpg);
+    background-color: #212529;
 }
 .fl-right{
     float: right;
@@ -59,3 +82,19 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
     float:left;
 }
 
+/* color stuff */
+/* Rows */
+
+.row2{ background-color:#F4F4F4;}
+.row3{background-color:#FFFFFF;}
+.row4{background-color:#323639;}
+
+/* Header */
+#header{border-color:white;}
+#header #logo h1 a{color:inherit;}
+
+
+/* Page Intro */
+#pageintro{color:#FFFFFF;}
+#pageintro footer input{ background-color:rgba(255,255,255,.5);}
+#pageintro footer button{background-color:#DBE5E7;}

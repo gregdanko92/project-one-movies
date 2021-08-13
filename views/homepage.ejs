@@ -36,7 +36,7 @@
 
   </div>
   <div class="wrapper row1">
-    <div class="movie-slides-title">
+    <div class="section-title">
       <h5 class="heading">Search any movie you want</h5>
       <p>Our database is sure to include whatever you're looking for.</p>
     </div>
@@ -69,84 +69,69 @@
         </div>
      </div>
   </div>
-    
-    <div class = "wrapper row2">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
+  <div class="wrapper row2">
+    <div id="recommendations" class="horizontal"> 
+        <div class="section-title">
+            <h6 class="heading">Need a suggestion?</h6>
+            <p>Try one of these award-winning movies.</p>
+        </div>
+        <div class="img-grid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
+              </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
+              </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
+              </div>
             </div>
           </div>
-
+          <div class="row top-buffer">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-search">
+          <a class="nav-link active" href="/search">Search for more</a>
+        </div>             
     </div>
+  </div>    
+  <div class="wrapper row3">
+    
+  </div>
+ 
     <%- include('./partials/footer.ejs') %>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>   
