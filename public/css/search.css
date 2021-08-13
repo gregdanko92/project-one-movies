@@ -1,0 +1,100 @@
+html{overflow-y:scroll; overflow-x:hidden; color:#c7c8c9}
+html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
+/* full width wrapper */
+.wrapper{display:block;position:relative;width:100%;margin:0;padding:0;text-align:left;}
+/* center horizontal */
+.horizontal{display:block;margin:0 auto;}
+/* rows */
+.row0{padding:80px 0 0 0;}
+
+/* header */
+#header-container{color:#c7c8c9;padding:0 15px; border:solid; border-width:1px 0; max-width: 1140px; min-height: 4rem;}
+#header-container #logo{margin:14px 0 0 0;}
+#header-container #logo h1{margin:0; padding:0; font-size:22px; line-height:1; text-transform:uppercase;}
+/* title */
+#pageintro{padding:140px 0}
+#pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem; font-weight: bold; }
+#pageintro p{max-width:75%; margin:0 auto;} 
+#pageintro footer{margin-top:50px;}
+#pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
+#pageintro footer input, #pageintro footer button{display:block; height:44px;}
+#pageintro footer input{width:100%; padding:5px 40px 5px 15px;}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: gray;
+    border-color: #c7c8c9;
+}
+.home-search{
+    border-color: #c7c8c9;
+    color: gray;
+}
+.row1{
+    padding-bottom: 20px;
+}
+.section-title{display:block; max-width:55%; margin:0 auto;margin-top: 5rem; text-align:center;}
+.section-title .heading{margin:0; padding:0; line-height:1;}
+.movie-slides-container{
+    margin:0 auto;
+    position: relative;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    
+}
+.top-buffer { margin-top:20px; }
+#recommendations{padding:20px 0;}
+.img-grid{
+    max-width:40%;
+    margin:0 auto;
+    
+}
+.img-rounded{
+    width: 100%
+}
+.footer-search{
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-social{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.bg{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay{
+    position: relative;
+    z-index: 1;
+}
+#header-overlay{
+    background-color: #212529;
+}
+.fl-right{
+    float: right;
+}
+.fl-left{
+    float:left;
+}
+
+/* color stuff */
+/* Rows */
+
+.row2{ background-color:#F4F4F4;}
+.row3{background-color:#FFFFFF;}
+.row4{background-color:#323639;}
+
+/* Header */
+#header{border-color:#c7c8c9;}
+#header #logo h1 a{color:inherit;}
+
+
+/* Page Intro */
+#pageintro{color:#FFFFFF;}
+#pageintro footer input{ background-color:rgba(255,255,255,.5);}
+#pageintro footer button{background-color:#DBE5E7;}
