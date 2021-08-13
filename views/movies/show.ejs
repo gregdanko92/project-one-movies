@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <title><%= oneMovie.Title %></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/show.css">
+  <title>
+    <%= oneMovie.Title %>
+  </title>
 </head>
 <body>
+<<<<<<< HEAD
   
     
     <main>
@@ -42,33 +49,112 @@
 
                 
                 <img src="<%= oneMovie.Poster %>" alt="">
+=======
+  <main>
+    <%- include('../partials/navbar.ejs') %>
+    <section>
+      <div class="page-wrapper">
+          <div class="title-header">
+              <div class="left-box">
+                  <h2>
+                      <%= oneMovie.Title %>
+                  </h2>
+                  <p>
+                      <%= oneMovie.Released%> | <%= oneMovie.Rated%> | <%= oneMovie.Runtime %>
+                  </p>
+              </div>
+              <div class="right-box">
+                  <div class="left-col">
+                      <div> IMDb</div>
+                      <div>
+                          <%= oneMovie.Ratings[0].Value %>
+                      </div>
+                  </div>
+                  <div class="center-col">
+                      <div>Rotten Tomatoes</div>
+                      <div>
+                          <%= oneMovie.Ratings[1].Value %>
+                      </div>
+                  </div>
+                  <div class="right-col">
+                      <div>Metacritic</div>
+                      <div>
+                          <%= oneMovie.Ratings[2].Value %>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="poster-container">
+              <img src="<%= oneMovie.Poster %>" alt="">
+          </div>
+          <div class="content-container">
+              <div>Genre: <%= oneMovie.Genre %></div>
+              <div>Director: <%= oneMovie.Director %></div>
+              <div>Writer: <%=oneMovie.Writer%></div>
+              <div>Actors: <%= oneMovie.Actors %></div>
+          </div>
+      </div>
+  </section>
+<!--   <img src="<%= oneMovie.Poster %>" alt="">
+  <ul>
+    <li>Title: <%= oneMovie.Title %>
+    </li>
+    <li>Director: <%= oneMovie.Director %>
+    </li>
+    <li>Genre: <%= oneMovie.Genre %>
+    </li>
+    <li>Actors: <%= oneMovie.Actors %>
+    </li>
+    <li>Rotten Tomatoes: <%= oneMovie.Ratings[1].Value %>
+    </li>
+    <li>
+      <button type="button" class="collapsible">See More Details</button>
+      <div class="content">
+        <ul>
+          <li>Rated: <%= oneMovie.Rated %>
+          </li>
+          <li>Year: <%= oneMovie.Released %>
+          </li>
+          <li>Runtime: <%= oneMovie.Runtime %>
+          </li>
+          <li>Awards: <%= oneMovie.Awards %>
+          </li>
+          <li>Country: <%= oneMovie.Country %>
+          </li>
+          <li>IMDB Rating: <%= oneMovie.Ratings[0].Value %>
+          </li>
+          <li>Metacritic: <%= oneMovie.Ratings[2].Value %>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul> -->
+>>>>>>> df2b46244c9fcb503945f250cf9f9fc6eab6bc96
+
+  </main>
 
 
-
-            
-
-
-
-        </section>
-    </main>
-
-
-    <script>
+  <script>
     let collapse = document.getElementsByClassName("collapsible")
-        for (let i = 0; i < collapse.length; i++) {
-          collapse[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            let content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        }</script>
+    for (let i = 0; i < collapse.length; i++) {
+      collapse[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }</script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

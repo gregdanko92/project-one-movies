@@ -24,7 +24,11 @@ app.get('/', (req, res) => {
     res.render('homepage.ejs');
 })
 /* ------------------------------ Start Server ------------------------------ */
+<<<<<<< HEAD
 app.listen(process.env.port || 3000, () => {
+=======
+app.listen(process.env.PORT || 4000, () => {
+>>>>>>> df2b46244c9fcb503945f250cf9f9fc6eab6bc96
     console.log(`Example app listening at http://localhost:${port}`);
     rowdyResults.print()
 });

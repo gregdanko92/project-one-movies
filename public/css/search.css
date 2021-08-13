@@ -1,0 +1,25 @@
+.row0{
+    background-color: #212529;
+    padding-bottom: 80px;
+}
+
+#pageintro{padding:40px 0}
+#pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem; font-weight: bold; }
+#pageintro p{max-width:75%; margin:0 auto;} 
+#pageintro footer{margin-top:50px;}
+#pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
+#pageintro footer input, #pageintro footer button{display:block; height:44px;}
+#pageintro footer input{width:100%; padding:5px 40px 5px 15px;}
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: gray;
+    border-color: gray;
+}
+.home-search{
+    border-color: gray;
+    color: gray;
+}
+.row1{
+    padding-bottom: 20px;
+}
