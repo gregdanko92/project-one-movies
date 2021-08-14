@@ -89,28 +89,80 @@ iframe {
 .bottom-wrapper{
     height:1000px;
 }
-.container {
-    padding: 100px 20px 0;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 200px;
-    overflow: hidden;
-    line-height: 1;
-  }
-  h1 span {
-    display: block;
-    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+.auto-container{
+	position:static;
+	max-width:1200px;
+	padding:0px 15px;
+	margin:0 auto;
+}
+
+.sec-title{
+	position:relative;
+	margin-bottom:45px;
+}
+
+.sec-title .title{
+	position: relative;
+    color: #84858a;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.sec-title .title:before{
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 6px;
+    height: 6px;
+    background-color: #f43737;
+}
+
+.sec-title h2{
+    position: relative;
+    color: #1f1f1f;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: capitalize;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(244,55,55,0.6) 50%, #f43737 50%, rgba(0,0,0,1) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
   }
   
-  @keyframes reveal {
-    0% {
-      transform: translate(0,100%);
-    }
-    100% {
-      transform: translate(0,0);
-    }
+  to {
+    -webkit-mask-position: -50%;
   }
+}
+
+.sec-title.centered{
+	text-align: center;
+}
+
+.sec-title.centered .text{
+	max-width:580px;
+	margin:0 auto;
+}
+
+.sec-title .title.light::before{
+	background-color:#ffffff;
+}
+
+.sec-title.light .title,
+.sec-title.light h2,
+.sec-title.light .text{
+	color:#ffffff;
+}
+
+.sec-title.centered .title:before{
+	left:50%;
+	margin-left:-3px;
+}
