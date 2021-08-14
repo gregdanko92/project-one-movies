@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/search.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/search.js"></script>
   <title>Search</title>
 </head>
 
@@ -22,18 +22,29 @@
     <%- include('../partials/navbar.ejs') %>
       <div id="pageintro">
         <article>
-          <h3 class="heading">Movie Watchlists</h3>
-          <p>Store your watchlists here.</p>
+          <h3 class="heading">MOVIO</h3>
+          <h4>Make a search</h4>
+          <p>Your next movie is just a search away.</p>
           <footer>
-            <form class="d-flex" method="POST" action="/search">
-              <label for="search"></label>
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
-              <button class="btn btn-outline-success home-search" type="submit">Search</button>
-            </form>
+            
           </footer>
         </article>
       </div>
+      <div class="search-wrapper">
+        <div class="input-holder">
+            <form method="POST" action="/search">
+            <input name="search" type="search" class="search-input" placeholder="Type to search" />
+            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+          </form>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
+    </div>
   </div>
+  <!-- <form class="d-flex" method="POST" action="/search">
+    <label for="search"></label>
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <button class="btn btn-outline-success home-search" type="submit">Search</button>
+  </form> -->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
     integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"

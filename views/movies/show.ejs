@@ -37,21 +37,27 @@
               <div class="right-box">
                 <div class="left-col">
                   <div> IMDb</div>
+                  <%if (typeof oneMovie.Ratings[0] != 'undefined') {%>
                   <div>
                     <%= oneMovie.Ratings[0].Value %>
                   </div>
+                  <%} else { %><div>N/A</div> <% } %>
                 </div>
                 <div class="center-col">
                   <div>Rotten Tomatoes</div>
+                  <%if (typeof oneMovie.Ratings[1] != 'undefined') {%>
                   <div>
                     <%= oneMovie.Ratings[1].Value %>
                   </div>
+                  <%} else { %><div>N/A</div> <% } %>
                 </div>
                 <div class="right-col">
                   <div>Metacritic</div>
+                  <%if (typeof oneMovie.Ratings[2] != 'undefined') {%>
                   <div>
                     <%= oneMovie.Ratings[2].Value %>
                   </div>
+                  <%} else { %><div>N/A</div> <% } %>
                 </div>
               </div>
             </div>
@@ -138,40 +144,6 @@
 
 
 
-      <!--   <img src="<%= oneMovie.Poster %>" alt="">
-  <ul>
-    <li>Title: <%= oneMovie.Title %>
-    </li>
-    <li>Director: <%= oneMovie.Director %>
-    </li>
-    <li>Genre: <%= oneMovie.Genre %>
-    </li>
-    <li>Actors: <%= oneMovie.Actors %>
-    </li>
-    <li>Rotten Tomatoes: <%= oneMovie.Ratings[1].Value %>
-    </li>
-    <li>
-      <button type="button" class="collapsible">See More Details</button>
-      <div class="content">
-        <ul>
-          <li>Rated: <%= oneMovie.Rated %>
-          </li>
-          <li>Year: <%= oneMovie.Released %>
-          </li>
-          <li>Runtime: <%= oneMovie.Runtime %>
-          </li>
-          <li>Awards: <%= oneMovie.Awards %>
-          </li>
-          <li>Country: <%= oneMovie.Country %>
-          </li>
-          <li>IMDB Rating: <%= oneMovie.Ratings[0].Value %>
-          </li>
-          <li>Metacritic: <%= oneMovie.Ratings[2].Value %>
-          </li>
-        </ul>
-      </div>
-    </li>
-  </ul> -->
 
   </main>
 
