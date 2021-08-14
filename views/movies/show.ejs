@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@700&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/show.css">
+  <script defer src=""></script>
   <title>
     <%= oneMovie.Title %>
   </title>
@@ -17,83 +21,123 @@
 <body>
   <main>
     <%- include('../partials/navbar.ejs') %>
-    <div class="page-wrapper">
-      <section>
-        
-        <div class="top-wrapper">
-          <div class="title-header">
-            <div class="left-box">
-              <h2>
-                <%= oneMovie.Title %>
-              </h2>
-              <p>
-                <%= oneMovie.Released%> | <%= oneMovie.Rated%> | <%= oneMovie.Runtime %>
-              </p>
-            </div>
-            <div class="right-box">
-              <div class="left-col">
-                <div> IMDb</div>
-                <div>
-                  <%= oneMovie.Ratings[0].Value %>
-                </div>
-              </div>
-              <div class="center-col">
-                <div>Rotten Tomatoes</div>
-                <div>
-                  <%= oneMovie.Ratings[1].Value %>
-                </div>
-              </div>
-              <div class="right-col">
-                <div>Metacritic</div>
-                <div>
-                  <%= oneMovie.Ratings[2].Value %>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="poster-container">
-            <img class="poster rounded" src="<%= oneMovie.Poster %>" alt="">
-            <iframe src="https://www.youtube.com/embed/FR3i0qKzRvg"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <!-- ------------------------------ =ytID%> ------------------------------ -->
+      <div class="page-wrapper">
+        <section>
 
-          </div>
-          <div class="content-container">
-            <div>
-              <%let arr=oneMovie.Genre.split(",")%>
-                <%for(let i=0; i<arr.length;i++){%>
-                  <span class="genre" id="gn-<%=i%>"><%=arr[i]%></span>
-                  <% }%>
-            </div>
-            <div class="plot">
-              <%=oneMovie.Plot%>
-            </div>
-            <div class="listEl">Director: <%= oneMovie.Director %>
-            </div>
-            <div class="listEl">Writer: <%=oneMovie.Writer%>
-            </div>
-            <div class="listEl last">Actors: <%= oneMovie.Actors %>
-            </div>
-          </div>
-        </div>
-      </section>          
-    </div>
-      <section>
-        <div class="bottom-wrapper">
-          <div class="auto-container">
-            <div class="row">
-              <div class="column col-lg-6 col-md-12 col-sm-12">
-                <div class="sec-title">
-                  <h2><%=oneMovie.Awards%></h2>
+          <div class="top-wrapper">
+            <div class="title-header">
+              <div class="left-box">
+                <h2>
+                  <%= oneMovie.Title %>
+                </h2>
+                <p>
+                  <%= oneMovie.Released%> | <%= oneMovie.Rated%> | <%= oneMovie.Runtime %>
+                </p>
+              </div>
+              <div class="right-box">
+                <div class="left-col">
+                  <div> IMDb</div>
+                  <div>
+                    <%= oneMovie.Ratings[0].Value %>
+                  </div>
                 </div>
-              </div>					
-            </div>							
-          </div>	
+                <div class="center-col">
+                  <div>Rotten Tomatoes</div>
+                  <div>
+                    <%= oneMovie.Ratings[1].Value %>
+                  </div>
+                </div>
+                <div class="right-col">
+                  <div>Metacritic</div>
+                  <div>
+                    <%= oneMovie.Ratings[2].Value %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="poster-container">
+              <img class="poster rounded" src="<%= oneMovie.Poster %>" alt="">
+              <iframe src="https://www.youtube.com/embed/FR3i0qKzRvg" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <!-- ------------------------------ =ytID%> ------------------------------ -->
+
+            </div>
+            <div class="content-container">
+              <div>
+                <%let arr=oneMovie.Genre.split(",")%>
+                  <%for(let i=0; i<arr.length;i++){%>
+                    <span class="genre" id="gn-<%=i%>">
+                      <%=arr[i]%>
+                    </span>
+                    <% }%>
+              </div>
+              <div class="plot">
+                <%=oneMovie.Plot%>
+              </div>
+              <div class="listEl first"><span class="cat">Director: </span>
+                <%= oneMovie.Director %>
+              </div>
+              <div class="listEl first"><span class="cat">Writer: </span>
+                <%=oneMovie.Writer%>
+              </div>
+              <div class="listEl first last"><span class="cat">Actors: </span>
+                <%= oneMovie.Actors %>
+              </div>
+              <div class="detail-btn">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="detail-btn">
+                  Show All
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="middle-wrapper">
+          <div class="content-container">
+            <div class="awards">
+              <h3>
+                <%=oneMovie.Awards%>
+              </h3>
+            </div>
+            <div class="listEl2">Title: <%= oneMovie.Title %>
+            </div>
+            <div class="listEl2">Director: <%=oneMovie.Director%>
+            </div>
+            <div class="listEl2 ">Writer: <%= oneMovie.Writer %>
+            </div>
+            <div class="listEl2">Genre: <%= oneMovie.Genre %>
+            </div>
+            <div class="listEl2">Actors: <%=oneMovie.Actors%>
+            </div>
+            <div class="listEl2 ">Released: <%= oneMovie.Released %>
+            </div>
+            <div class="listEl2">Rated: <%= oneMovie.Rated %>
+            </div>
+            <div class="listEl2">Runtime: <%=oneMovie.Runtime%>
+            </div>
+            <div class="listEl2 ">Language: <%= oneMovie.Language %>
+            </div>
+            <div class="listEl2">Country: <%= oneMovie.Country %>
+            </div>
+            <div class="listEl2">DVD Release Date: <%=oneMovie.DVD%>
+            </div>
+            <div class="listEl2">BoxOffice: <%= oneMovie.BoxOffice %>
+            </div>
+            <div class="listEl2">Production: <%=oneMovie.Production%>
+            </div>
+            <div class="listEl2 last">Website: <%= oneMovie.Website %>
+            </div>
+          </div>
         </div>
-      </section> 
-    
+      </div>
+      <div class="bottom-wrapper">
+
+      </div>
+
+
+
       <!--   <img src="<%= oneMovie.Poster %>" alt="">
   <ul>
     <li>Title: <%= oneMovie.Title %>
@@ -132,19 +176,6 @@
   </main>
 
 
-  <script>
-    let collapse = document.getElementsByClassName("collapsible")
-    for (let i = 0; i < collapse.length; i++) {
-      collapse[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        let content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }</script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
@@ -153,6 +184,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
     integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>

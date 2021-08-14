@@ -1,15 +1,19 @@
 html{overflow-y:scroll; overflow-x:hidden;}
+body{
+    font-family: 'Raleway', sans-serif;
+}
 html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 /* full width wrapper */
 .wrapper{display:block;position:relative;width:100%;margin:0;padding:0;text-align:left;}
 /* center horizontal */
 .horizontal{display:block;margin:0 auto;}
+
 /* title */
 #pageintro{padding:140px 0}
 #pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
-#pageintro .heading{margin-bottom:20px; font-size:4rem; font-weight: bold; }
+#pageintro .heading{margin-bottom:10px; font-size:6rem; font-weight: bold;font-family: 'Roboto Condensed', sans-serif; }
 #pageintro p{max-width:75%; margin:0 auto;} 
-#pageintro footer{margin-top:50px;}
+#pageintro footer{margin-top:30px;}
 #pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
 #pageintro footer input, #pageintro footer button{display:block; height:44px;}
 #pageintro footer input{width:100%; padding:5px 40px 5px 15px;}
@@ -22,21 +26,17 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
     border-color: gray;
     color: gray;
 }
-.row1{
-    padding-bottom: 20px;
-}
 .section-title{display:block; max-width:55%; margin:0 auto;margin-top: 5rem; text-align:center;}
 .section-title .heading{margin:0; padding:0; line-height:1;}
 .movie-slides-container{
     margin:0 auto;
     position: relative;
-    width: 20%;
+    width: 25%;
     height: 0;
-    padding-bottom: 20%;
-    
+    padding-bottom: 28%;   
 }
-.top-buffer { margin-top:20px; }
-#recommendations{padding:20px 0;}
+/* .top-buffer { margin-top:20px; } */
+ #recommendations{padding:5px 0;}  
 .img-grid{
     max-width:40%;
     margin:0 auto;
@@ -73,6 +73,18 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 }
 .fl-left{
     float:left;
+}
+.pre-btn-con{
+    width:100%;
+}
+.pre-btn{
+    margin:5px auto;
+    display:block;
+    background-color: #f4f4f4;
+    border-width: 1px;
+    border-color: #808080;
+    
+    
 }
 
 /* color stuff */

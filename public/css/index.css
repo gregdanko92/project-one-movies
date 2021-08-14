@@ -1,3 +1,15 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.row0{
+    background-color: #212529;
+}
+#header-container{
+    color:white;
+}
+.navbar{
+    background-color: #212529;
+}
 #moviesGrid {
     display:flex;
     flex-flow: row wrap;
