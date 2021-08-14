@@ -18,27 +18,29 @@
 
 <body>
     <%- include('../partials/navbar.ejs') %>
-        <div class="page-wrapper">
-            <div id="moviesGrid">
+        <div class="grid-wrapper">
+            <div class="grid-body">
                 <% for(let i=0; i < allMovies.length; i++) { %>
-                    <div id="moviesSolo">
-                        <a href="/movies/<%= allMovies[i]._id  %>">
-                            <h2>
-                                <%= allMovies[i].Title %>
-                            </h2>
-                        </a>
-                        <div id="moviesPoster">
-                            <img src="<%=allMovies[i].Poster%>" alt="">
+                    <% if(allMovies[i].Poster==="N/A"
+                        ){allMovies[i].Poster="https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png"
+                        }%>
+                        <div class="card">
+                            <article class="content">
+                                <div class="content-img">
+                                    <a href="/movies/<%= allMovies[i]._id  %>"><img class="movie-img rounded"
+                                            src="<%=allMovies[i].Poster%>" alt=""></a>
+                                </div>
+                                <div class="close-btn">
+                                    <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
+                                        <input class="btn-close btn-close-white" aria-label="Close" type="submit">
+                                    </form>
+                                </div>
+                            </article>
                         </div>
-                        <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
-                            <input type="submit" value="Delete this movie">
-                        </form>
-                        <a href="/movies/<%= allMovies[i]._id  %>/edit">Edit this movie</a>
-                    </div>
-
-                    <% } %>
+                        <%}%>
             </div>
         </div>
+
 
 
 

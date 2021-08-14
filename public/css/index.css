@@ -1,37 +1,33 @@
-body{
-    font-family: 'Raleway', sans-serif;
-}
-.row0{
-    background-color: #212529;
-}
-#header-container{
-    color:white;
-}
-.navbar{
-    background-color: #212529;
-}
-#moviesGrid {
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    max-width: 76%;
-    margin: 0 auto;
-    background-color: gray;
-    padding:10px;
-}
-
-#moviesSolo{
-    background-color: dimgray;
-    display: flex;
-    flex-flow: column nowrap;
-    max-width: 25%;
+.movie-img {
+    width: 100%; /* need to overwrite inline dimensions */
+    height: auto;
+  }
+  .content {
+    position: relative;
+  }
+  .grid-wrapper{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #1f1f1f;
+  }
+  .grid-body {
+    margin:20px auto;
+    display: grid;
+    max-width: 70%;
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
+    grid-gap: 1em;
+  }
+  .content-img {
+    line-height: 0;
     overflow: hidden;
-    align-items: center;
-    padding: 10px;
-    
-}
-/* 
-#moviesPoster {
-    max-height: 300px;
-    max-width: 250px;
-} */
+  }
+ .close-btn{
+    position:absolute;
+    top:0;
+    right:0;
+ } 
+ .close{
+     border: 1px solid black;
+ }
+  
+ 
