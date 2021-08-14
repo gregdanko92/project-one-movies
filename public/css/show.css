@@ -37,6 +37,16 @@ margin-bottom: 1rem;
     display:flex;
     width: 60%;
     align-content: space-between;
+    justify-content: space-between;
+    
+}
+.poster{
+    /* width:33%;
+    margin-right: 20px; */
+}
+iframe {
+    align-self: stretch;
+    
 }
 .content-container{
     margin:20px auto;
@@ -44,4 +54,7 @@ margin-bottom: 1rem;
     width: 60%;
     align-content: space-between;
     flex-direction: column;
+}
+.plot{
+    padding-right: 30%;
 }

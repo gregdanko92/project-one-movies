@@ -49,11 +49,20 @@
               </div>
           </div>
           <div class="poster-container">
-              <img src="<%= oneMovie.Poster %>" alt="">
+              <img class="poster rounded" src="<%= oneMovie.Poster %>" alt="">
+              
+              <iframe  src="https://www.youtube.com/embed/<%=ytID%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              
+              
+          
           </div>
           <div class="content-container">
-              <div class="plot"><%=oneMovie.Plot%></div>
-              <div>Genre: <%= oneMovie.Genre %></div>
+            <div> <%let arr = oneMovie.Genre.split(",")%>
+              <%for(let i =0; i<arr.length;i++){%>
+                <span class="genre-<%=i%>"> | <%=arr[i]%> |</span>
+           <% }%>
+              </div>
+              <div class="plot"><%=oneMovie.Plot%></div>              
               <div>Director: <%= oneMovie.Director %></div>
               <div>Writer: <%=oneMovie.Writer%></div>
               <div>Actors: <%= oneMovie.Actors %></div>
