@@ -27,13 +27,15 @@
                                 <%= allMovies[i].Title %>
                             </h2>
                         </a>
-                        <div id="moviesPoster">
+                        <div class="moviesPoster">
                             <img src="<%=allMovies[i].Poster%>" alt="">
+                            <div>
+                                <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
+                                    <input type="submit" value="Delete this movie">
+                                </form>
+                                <a href="/movies/<%= allMovies[i]._id  %>/edit">Edit this movie</a>
+                            </div>
                         </div>
-                        <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
-                            <input type="submit" value="Delete this movie">
-                        </form>
-                        <a href="/movies/<%= allMovies[i]._id  %>/edit">Edit this movie</a>
                     </div>
 
                     <% } %>
