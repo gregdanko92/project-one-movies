@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/homepage.css">
     <script defer src="js/homepage.js"></script>
     <title>Document</title>
 </head>
 <body>
   <div class="bg overlay" id="header-overlay">
-    <%- include('./partials/navbar.ejs') %>
+    <div class="wrapper row0">
+      <div id="header-container"class="horizontal">
+        <div id="logo" class= "fl-left">
+          <h1>Title</h1>
+        </div>
+        <%- include('./partials/navbar.ejs') %>
+      </div>
+    </div>
       
     <div id="pageintro">               
       <article>
@@ -71,71 +77,50 @@
         </div>
         <div class="img-grid">
           <div class="row">
-
             <div class="col-md-4">
               <div class="thumbnail">
-                  <img src= <%=exampleMovies[0].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[0].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
               </div>
             </div>
-
             <div class="col-md-4">
               <div class="thumbnail">
-                  <img src= <%=exampleMovies[1].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[1].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
               </div>
             </div>
-
             <div class="col-md-4">
               <div class="thumbnail">
-                  <img src= <%=exampleMovies[2].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[2].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
               </div>
             </div>
-
           </div>
-
           <div class="row top-buffer">
-
             <div class="col-md-4">
               <div class="thumbnail">
-                  <img src= <%=exampleMovies[3].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[3].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
               </div>
             </div>
-
             <div class="col-md-4">
               <div class="thumbnail">
-                  <img src= <%=exampleMovies[4].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[4].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
               </div>
             </div>
-
             <div class="col-md-4">
               <div class="thumbnail">
-                  <img src= <%=exampleMovies[5].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[5].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
+                <a href="">
+                  <img src="https://via.placeholder.com/150" class="img-rounded rounded">
+                </a>
               </div>
             </div>
-
           </div>
         </div>
         <div class="footer-search">

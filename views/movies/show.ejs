@@ -13,63 +13,83 @@
     <%= oneMovie.Title %>
   </title>
 </head>
+
 <body>
   <main>
     <%- include('../partials/navbar.ejs') %>
-    <section>
-      <div class="page-wrapper">
+    <div class="page-wrapper">
+      <section>
+        
+        <div class="top-wrapper">
           <div class="title-header">
-              <div class="left-box">
-                  <h2>
-                      <%= oneMovie.Title %>
-                  </h2>
-                  <p>
-                      <%= oneMovie.Released%> | <%= oneMovie.Rated%> | <%= oneMovie.Runtime %>
-                  </p>
+            <div class="left-box">
+              <h2>
+                <%= oneMovie.Title %>
+              </h2>
+              <p>
+                <%= oneMovie.Released%> | <%= oneMovie.Rated%> | <%= oneMovie.Runtime %>
+              </p>
+            </div>
+            <div class="right-box">
+              <div class="left-col">
+                <div> IMDb</div>
+                <div>
+                  <%= oneMovie.Ratings[0].Value %>
+                </div>
               </div>
-              <div class="right-box">
-                  <div class="left-col">
-                      <div> IMDb</div>
-                      <div>
-                          <%= oneMovie.Ratings[0].Value %>
-                      </div>
-                  </div>
-                  <div class="center-col">
-                      <div>Rotten Tomatoes</div>
-                      <div>
-                          <%= oneMovie.Ratings[1].Value %>
-                      </div>
-                  </div>
-                  <div class="right-col">
-                      <div>Metacritic</div>
-                      <div>
-                          <%= oneMovie.Ratings[2].Value %>
-                      </div>
-                  </div>
+              <div class="center-col">
+                <div>Rotten Tomatoes</div>
+                <div>
+                  <%= oneMovie.Ratings[1].Value %>
+                </div>
               </div>
+              <div class="right-col">
+                <div>Metacritic</div>
+                <div>
+                  <%= oneMovie.Ratings[2].Value %>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="poster-container">
-              <img class="poster rounded" src="<%= oneMovie.Poster %>" alt="">
-              
-              <iframe  src="https://www.youtube.com/embed/<%=ytID%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-              
-          
+            <img class="poster rounded" src="<%= oneMovie.Poster %>" alt="">
+            <iframe src="https://www.youtube.com/embed/FR3i0qKzRvg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <!-- ------------------------------ =ytID%> ------------------------------ -->
+
           </div>
           <div class="content-container">
-            <div> <%let arr = oneMovie.Genre.split(",")%>
-              <%for(let i =0; i<arr.length;i++){%>
-                <span class="genre-<%=i%>"> | <%=arr[i]%> |</span>
-           <% }%>
-              </div>
-              <div class="plot"><%=oneMovie.Plot%></div>              
-              <div>Director: <%= oneMovie.Director %></div>
-              <div>Writer: <%=oneMovie.Writer%></div>
-              <div>Actors: <%= oneMovie.Actors %></div>
+            <div>
+              <%let arr=oneMovie.Genre.split(",")%>
+                <%for(let i=0; i<arr.length;i++){%>
+                  <span class="genre" id="gn-<%=i%>"><%=arr[i]%></span>
+                  <% }%>
+            </div>
+            <div class="plot">
+              <%=oneMovie.Plot%>
+            </div>
+            <div class="listEl">Director: <%= oneMovie.Director %>
+            </div>
+            <div class="listEl">Writer: <%=oneMovie.Writer%>
+            </div>
+            <div class="listEl last">Actors: <%= oneMovie.Actors %>
+            </div>
           </div>
-      </div>
-  </section>
-<!--   <img src="<%= oneMovie.Poster %>" alt="">
+        </div>
+      </section>          
+    </div>
+      <section>
+        <div class="bottom-wrapper">
+          <div class="container-fluid">
+            <h1>
+                <span>Bangladesh</span>
+            </h1>
+        </div>
+      </section> 
+    
+      <!--   <img src="<%= oneMovie.Poster %>" alt="">
   <ul>
     <li>Title: <%= oneMovie.Title %>
     </li>
