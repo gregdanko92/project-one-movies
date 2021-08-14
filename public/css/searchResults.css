@@ -47,7 +47,7 @@
     left: 0;
     opacity: 0;
     transition: opacity .5s;
-    background: rgba(90,0,10,0.4);
+    background: rgba(85, 87, 100, 0.4);
     color: white;
     pointer-events: none;
     text-align: center;

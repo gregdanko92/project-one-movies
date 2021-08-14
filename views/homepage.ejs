@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed:wght@700&display=swap');
-  </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/homepage.css">
-  <title>MOVIO</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    </style> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <script defer src="js/homepage.js"></script>
+    <title>Document</title>
 </head>
-
 <body>
   <div class="bg overlay" id="header-overlay">
     <%- include('./partials/navbar.ejs') %>
-
-      <div id="pageintro">
-        <article>
-          <h1 class="heading">MOVIO</h1>
-          <p>Store your watchlists here.</p>
+      
+    <div id="pageintro">               
+      <article>
+        <h3 class="heading">Movie Watchlists</h3>
+        <p>Store your watchlists here.</p>
           <footer>
             <form class="d-flex" method="POST" action="/search">
               <label for="search"></label>
@@ -31,155 +28,93 @@
               <button class="btn btn-outline-success home-search" type="submit">Search</button>
             </form>
           </footer>
-        </article>
-      </div>
+      </article>                
+    </div>
 
   </div>
   <div class="wrapper row1">
     <div class="section-title">
-      <h4 class="heading">Search any movie you want</h4>
+      <h5 class="heading">Search any movie you want</h5>
       <p>Our database is sure to include whatever you're looking for.</p>
     </div>
     <div class="movie-slides-container">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://m.media-amazon.com/images/I/81u17vDIrAL._AC_SS300_.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item ">
+              <img src="https://i.icanvas.com/list-square/japanese-movie-posters-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item ">
+              <img src="https://cdn.shopify.com/s/files/1/0081/1260/3217/products/1201a23a23a54244b20f8942c45184c5_300x.jpg?v=1588436691" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://m.media-amazon.com/images/I/81u17vDIrAL._AC_SS300_.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item ">
-            <img src="https://i.icanvas.com/list-square/japanese-movie-posters-2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item ">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0081/1260/3217/products/1201a23a23a54244b20f8942c45184c5_300x.jpg?v=1588436691"
-              class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+     </div>
   </div>
   <div class="wrapper row2">
-    <div id="recommendations" class="horizontal">
-      <div class="section-title">
-        <h4 class="heading">Need a suggestion?</h4>
-        <p>Try one of these award-winning movies.</p>
-      </div>
-      <div class="img-grid">
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src=<%=exampleMovies[0].Poster %> class="img-rounded rounded">
-              <div class="pre-btn-con">
-                <form action="/movies" method="post">
-                  <input type="hidden" name="Title" value="<%=exampleMovies[0].Title%> ">
-                  <input class="pre-btn rounded" type="submit" value="Add to Watchlist">
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src=<%=exampleMovies[1].Poster %> class="img-rounded rounded">
-              <div class="pre-btn-con">
-                <form action="/movies" method="post">
-                  <input type="hidden" name="Title" value="<%=exampleMovies[1].Title%> ">
-                  <input class="pre-btn rounded" type="submit" value="Add to Watchlist">
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src=<%=exampleMovies[2].Poster %> class="img-rounded rounded">
-              <div class="pre-btn-con">
-                <form action="/movies" method="post">
-                  <input type="hidden" name="Title" value="<%=exampleMovies[2].Title%> ">
-                  <input class="pre-btn rounded" type="submit" value="Add to Watchlist">
-                </form>
-              </div>
-            </div>
-          </div>
-
+    <div id="recommendations" class="horizontal"> 
+        <div class="section-title">
+            <h6 class="heading">Need a suggestion?</h6>
+            <p>Try one of these award-winning movies.</p>
         </div>
+        <div class="grid-wrapper">
+          <div class="grid-body">
+              <% for(let i=0; i < exampleMovies.length; i++) { %>
+                  <% if(exampleMovies[i].Poster==="N/A"
+                      ){exampleMovies[i].Poster="https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png"
+                      }%>
+                      <div class="card">
+                          <article class="content">
+                              <div class="content-img">
+                                  <form action="/movies" method="POST">
+                                      <input name="Title" type="hidden" value="<%=exampleMovies[i].Title%>">
+                                      <input name="Year" type="hidden" value="<%=exampleMovies[i].Year%>">
+                                      <input name="Type" type="hidden" value="<%=exampleMovies[i].Type%>">
+                                      <input name="Poster" type="hidden" value="<%=exampleMovies[i].Poster%>">
+                                      <input class="movie-img rounded" type="image" src="<%=exampleMovies[i].Poster%>"
+                                          alt="submit">
+                                  </form>
+                              </div>
+                              <div class="context-text">
+                                  <h3 class="title">
+                                      <%=exampleMovies[i].Title%>
+                                  </h3>
+                              </div>
 
-        <div class="row top-buffer">
+                          </article>
 
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src=<%=exampleMovies[3].Poster %> class="img-rounded rounded">
-              <div class="pre-btn-con">
-                <form action="/movies" method="post">
-                  <input type="hidden" name="Title" value="<%=exampleMovies[3].Title%> ">
-                  <input class="pre-btn rounded" type="submit" value="Add to Watchlist">
-                </form>
-              </div>
-            </div>
+                      </div>
+
+                      <%}%>
           </div>
 
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src=<%=exampleMovies[4].Poster %> class="img-rounded rounded">
-              <div class="pre-btn-con">
-                <form action="/movies" method="post">
-                  <input type="hidden" name="Title" value="<%=exampleMovies[4].Title%> ">
-                  <input class="pre-btn rounded" type="submit" value="Add to Watchlist">
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src=<%=exampleMovies[5].Poster %> class="img-rounded rounded">
-              <div class="pre-btn-con">
-                <form action="/movies" method="post">
-                  <input type="hidden" name="Title" value="<%=exampleMovies[5].Title%> ">
-                  <input class="pre-btn rounded" type="submit" value="Add to Watchlist">
-                </form>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
-      <div class="footer-search">
-        <a class="nav-link active" href="/search">Search for more</a>
-      </div>
+        <div class="footer-search">
+          <a class="nav-link active" href="/search">Search for more</a>
+        </div>             
     </div>
-  </div>
+  </div>    
   <div class="wrapper row3">
-
+    
   </div>
-
-  <%- include('./partials/footer.ejs') %>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-      integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
-      integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
-      crossorigin="anonymous"></script>
-
+ 
+    <%- include('./partials/footer.ejs') %>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>   
 </body>
-
 </html>
