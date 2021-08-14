@@ -5,34 +5,35 @@ const mongoose = require('mongoose');
 /* ------------------------------ define schema ----------------------------- */
 const movieSchema = new mongoose.Schema({
 
-    Title: { type:String}, //required
-    Director: { type: String},
-    Writer: {type: String},
-    Genre: { type: String},
-    Actors: [{type:String}], 
-    Released: {type: String},
-    Rated: {type: String},
-    Runtime: {type: String},
-    Language: {type: String},
-    Country: {type: String},
-    Awards: {type: String},
-    Poster: {type: String},
+    Title: { type:String, default: 'N/A' }, //required
+    Director: { type: String, default: 'N/A'},
+    Writer: {type: String, default: 'N/A'},
+    Plot: {type: String, default:'N/A'},
+    Genre: { type: String, default: 'N/A'},
+    Actors: [{type:String, default: 'N/A'}], 
+    Released: {type: String, default: 'N/A'},
+    Rated: {type: String, default: 'N/A'},
+    Runtime: {type: String, default: 'N/A'},
+    Language: {type: String, default: 'N/A'},
+    Country: {type: String, default: 'N/A'},
+    Awards: {type: String, default: 'N/A'},
+    Poster: {type: String, default: 'N/A'},
     Ratings: [
         {
-            Source: {type: String},
-            Value: {type: String},
+            Source: {type: String, default: 'N/A'},
+            Value: {type: String, default: 'N/A'},
         }
     ],   // need to include sources and ratings, ie source:IMDB, Value: 8.1/10
-    Metascore: {type: String},
-    imdbRating: {type: String},
-    imdbVotes: {type: String},
-    imdbID: {type:String},
-    Type: {type: String},
-    DVD: {type: String},
-    BoxOffice: {type: String},
-    Production: {type: String},
-    Website: {type: String},
-    Response: {type: String}
+    Metascore: {type: String, default: 'N/A'},
+    imdbRating: {type: String, default: 'N/A'},
+    imdbVotes: {type: String, default: 'N/A'},
+    imdbID: {type:String, default: 'N/A'},
+    Type: {type: String, default: 'N/A'},
+    DVD: {type: String, default: 'N/A'},
+    BoxOffice: {type: String, default: 'N/A'},
+    Production: {type: String, default: 'N/A'},
+    Website: {type: String, default: 'N/A'},
+    Response: {type: String, default: 'N/A' }
    
 
 })

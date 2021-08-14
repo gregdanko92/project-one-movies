@@ -23,7 +23,7 @@
                             <%= allMovies[i].Title %>
                         </h2>
                     </a>
-                    <div>
+                    <div id="moviesPoster">
                     <img src="<%=allMovies[i].Poster%>" alt="">
                     </div>
                     <form action="/movies/<%= allMovies[i]._id %>?_method=DELETE" method="POST">
