@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 
 
@@ -34,10 +35,10 @@
     margin-bottom: auto;
 }
 .nav {
-    font-family: 'Titillium Web';
+    font-family: 'Merriweather', serif;
     text-transform: uppercase;
     margin-left: auto;
-    font-weight: 600;  
+    font-weight: 300;  
     
 }
 
@@ -59,7 +60,7 @@
   color: rgba(255,255,255,.5);
   position: relative;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .nav a::before,

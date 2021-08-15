@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
 html{overflow-y:scroll; overflow-x:hidden;}
 body{
     font-family: 'Raleway', sans-serif;
 }
-
+p{
+  font-family: 'Open Sans', sans-serif;
+}
 /* full width wrapper */
 
 /* center horizontal */
@@ -10,7 +13,7 @@ body{
 /* title */
 #pageintro{padding:50px 0}
 #pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
-#pageintro .heading{margin-bottom:10px; font-size:6rem; font-weight: bold;font-family: 'Roboto Condensed', sans-serif; }
+#pageintro .heading{margin-bottom:10px; font-size:6rem; font-weight: bold;}
 #pageintro p{max-width:75%; margin:0 auto;} 
 #pageintro footer{margin-top:30px;}
 #pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
@@ -20,6 +23,23 @@ body{
     color: #fff;
     background-color: gray;
     border-color: gray;
+}
+.heading {
+  color: white;
+  text-decoration: none;  
+  font-family: 'Raleway';
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  
+}
+.heading:hover {
+  color:#f4f4f4; 
+  cursor:pointer;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff;
 }
 .home-search{
     border-color: gray;
