@@ -84,13 +84,13 @@
                 <%=oneMovie.Plot%>
               </div>
               <div class="listEl first"><span class="cat">Director: </span>
-                <%= oneMovie.Director %>
+                <span class="details"></span><%= oneMovie.Director %>
               </div>
               <div class="listEl first"><span class="cat">Writer: </span>
-                <%=oneMovie.Writer%>
+                <span class="details"><%=oneMovie.Writer%></span>
               </div>
               <div class="listEl first last"><span class="cat">Actors: </span>
-                <%= oneMovie.Actors %>
+                <span class="details"><%= oneMovie.Actors %></span>
               </div>
               <div class="detail-btn">
                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="detail-btn">
@@ -109,33 +109,33 @@
                 <%=oneMovie.Awards%>
               </h3>
             </div>
-            <div class="listEl2">Title: <%= oneMovie.Title %>
+            <div class="listEl2">Title: <span class="details"><%= oneMovie.Title %></span>
             </div>
-            <div class="listEl2">Director: <%=oneMovie.Director%>
+            <div class="listEl2">Director: <span class="details"><%=oneMovie.Director%></span>
             </div>
-            <div class="listEl2 ">Writer: <%= oneMovie.Writer %>
+            <div class="listEl2 ">Writer: <span class="details"><%= oneMovie.Writer %></span>
             </div>
-            <div class="listEl2">Genre: <%= oneMovie.Genre %>
+            <div class="listEl2">Genre: <span class="details"><%= oneMovie.Genre %></span>
             </div>
-            <div class="listEl2">Actors: <%=oneMovie.Actors%>
+            <div class="listEl2">Actors: <span class="details"><%=oneMovie.Actors%></span>
             </div>
-            <div class="listEl2 ">Released: <%= oneMovie.Released %>
+            <div class="listEl2 ">Released: <span class="details"><%= oneMovie.Released %></span>
             </div>
-            <div class="listEl2">Rated: <%= oneMovie.Rated %>
+            <div class="listEl2">Rated: <span class="details"><%= oneMovie.Rated %></span>
             </div>
-            <div class="listEl2">Runtime: <%=oneMovie.Runtime%>
+            <div class="listEl2">Runtime: <span class="details"><%=oneMovie.Runtime%></span>
             </div>
-            <div class="listEl2 ">Language: <%= oneMovie.Language %>
+            <div class="listEl2 ">Language: <span class="details"><%= oneMovie.Language %></span>
             </div>
-            <div class="listEl2">Country: <%= oneMovie.Country %>
+            <div class="listEl2">Country: <span class="details"><%= oneMovie.Country %></span>
             </div>
-            <div class="listEl2">DVD Release Date: <%=oneMovie.DVD%>
+            <div class="listEl2">DVD Release Date: <span class="details"><%=oneMovie.DVD%></span>
             </div>
-            <div class="listEl2">BoxOffice: <%= oneMovie.BoxOffice %>
+            <div class="listEl2">BoxOffice: <span class="details"><%= oneMovie.BoxOffice %></span>
             </div>
-            <div class="listEl2">Production: <%=oneMovie.Production%>
+            <div class="listEl2">Production: <span class="details"><%=oneMovie.Production%></span>
             </div>
-            <div class="listEl2 last">Website: <%= oneMovie.Website %>
+            <div class="listEl2 last">Website: <span class="details"><%= oneMovie.Website %></span>
             </div>
           </div>
         </div>
