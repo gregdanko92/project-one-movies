@@ -1,3 +1,22 @@
+.title-wrapper{
+  width:100%;
+  background-color: #1f1f1f;
+  color:#f4f4f4;
+
+  
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  
+  max-width: 70%;
+  margin:0 auto;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+.title h4{
+  margin:0;
+}
 .movie-img {
     width: 100%; /* need to overwrite inline dimensions */
     height: auto;
@@ -6,7 +25,7 @@
     margin-bottom: .5em;
   }
   .grid-wrapper{
-      padding-top: 30px;
+      padding-top: 10px;
       padding-bottom: 30px;
       background-color: #1f1f1f;
   }
@@ -72,7 +91,7 @@
   }
   
   .content:hover .content-img .movie-img {
-    filter: blur(2px);
+    filter: blur(1px);
   }
    
   

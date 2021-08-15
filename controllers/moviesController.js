@@ -5,6 +5,7 @@ const express = require('express');
 const db = require('../models/index.js')
 const router = express.Router();
 const ytApi = process.env.apiYT
+const wmAPI = process.env.WATCHMODEAPI
 const api = process.env.apiKey
 const axios = require('axios')
 
