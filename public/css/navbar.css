@@ -21,7 +21,7 @@
     font-family: 'Raleway';
     align-items: center;
     justify-content: center;
-    
+    transition: text-shadow 1s;
 }
 
 #logo-a:hover {
