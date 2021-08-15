@@ -103,6 +103,12 @@ iframe {
     max-width: 20%;
     background-color: #313131;
     border-color: #1f1f1f;
+    box-shadow: none;
+    
+}
+#detail-btn:active {
+    border-color: #aeaeae;
+    box-shadow: none;
 }
 .last{
     padding-bottom: 1rem;
