@@ -19,7 +19,8 @@ router.post('/', (req, res) => {
     .then((data) => {
         temp = data.data.Search
         if (data.data.Response === 'False') {
-            res.send(data.data.Error)
+            res.json({success: false});
+            
         }
          else {
              res.redirect('/search/results')
