@@ -5,6 +5,7 @@ const express = require('express');
 const db = require('../models/index.js')
 const router = express.Router();
 const ytApi = process.env.apiYT
+const wmAPI = process.env.WATCHMODEAPI
 const api = process.env.apiKey
 const axios = require('axios')
 
@@ -34,8 +35,9 @@ router.post('/', (req, res) => {
       db.Movies.findOne({imdbID: temp.imdbID},(err,foundMovie)=>{
         if(err) return console.log(err)
         if(foundMovie){
-            // alert("This already exists")
-            res.send('this already exists')
+            let error = "This movie already exists in your watchlist!"
+            res.render("error.ejs", {error: error})
+            // res.redirect('/search/error')
 
         }
         else{

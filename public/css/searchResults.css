@@ -21,11 +21,11 @@
     width: 100%; /* need to overwrite inline dimensions */
     height: auto;
   }
-  .content {
-    position: relative;
+  h2 {
+    margin-bottom: .5em;
   }
   .grid-wrapper{
-      padding-top: 30px;
+      padding-top: 10px;
       padding-bottom: 30px;
       background-color: #1f1f1f;
   }
@@ -36,17 +36,8 @@
     grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
     grid-gap: 1em;
   }
-  .content-img {
-    line-height: 0;
-    overflow: hidden;
-  }
- .close-btn{
-    position:absolute;
-    top:0;
-    right:0;
- } 
  
- 
+  
   /* hover styles */
   .content {
     position: relative;
@@ -100,5 +91,8 @@
   }
   
   .content:hover .content-img .movie-img {
-    filter: blur(2px);
+    filter: blur(1px);
   }
+   
+  
+  

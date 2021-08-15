@@ -11,10 +11,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/search.css">
+  <script src="https://kit.fontawesome.com/91fe73862f.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="../js/search.js"></script>
-  <title>Search</title>
+  <title>MOVIO - Search</title>
 </head>
 
 <body>
@@ -22,24 +23,19 @@
     <%- include('../partials/navbar.ejs') %>
       <div id="pageintro">
         <article>
-          <h3 class="heading">MOVIO</h3>
           <h4>Make a search</h4>
           <p>Your next movie is just a search away.</p>
           <footer>
-            
+            <form class="d-flex" method="POST" action="/search">
+              <label for="search"></label>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+              <button class="btn btn-outline-success home-search" type="submit">Search</button>
+            </form>
           </footer>
         </article>
       </div>
-      <div class="search-wrapper">
-        <div class="input-holder">
-            <form method="POST" action="/search">
-            <input name="search" type="search" class="search-input" placeholder="Type to search" />
-            <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
-          </form>
-        </div>
-        <span class="close" onclick="searchToggle(this, event);"></span>
-    </div>
   </div>
+  <%- include('../partials/footer.ejs') %>
   <!-- <form class="d-flex" method="POST" action="/search">
     <label for="search"></label>
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
