@@ -76,11 +76,19 @@ router.get('/:dataId', (req, res) => { // grab id from url
       let streamLinks = []
       let index = null
 
-      for (let i = 0; i < wmIDSearch.data.length; i++) {
+     /*  for (let i = 0; i < wmIDSearch.data.length; i++) {
         if (wmServices.some(stream => stream.id === wmIDSearch.data[i].source_id)) {
           index = wmServices.findIndex(stream => stream.id === wmIDSearch.data[i].source_id)
           streamService.push(wmServices[index])
           streamLinks.push(wmIDSearch.data[i])
+        }
+      }
+ */
+      for (let i = 0; i < 10; i++) {
+        if (wmIDSearch.data.some(stream => stream.source_id === wmServices[i].id)) {
+          index = wmIDSearch.data.findIndex(stream => stream.source_id === wmServices[i].id)
+          streamService.push(wmServices[i])
+          streamLinks.push(wmIDSearch.data[index])
         }
       }
       streamService = streamService.filter((elem, index, self) => self.findIndex(
@@ -96,6 +104,11 @@ router.get('/:dataId', (req, res) => { // grab id from url
       for (let i = 0; i < tdSearch.data.Similar.Results.length; i++) {
         tdResults.push(tdSearch.data.Similar.Results[i])
       }
+      let tdSplit = [[],[]]
+      for(let i = 0; i < tdResults.length;i++){
+        tdSplit[0].push(tdResults[i].wTeaser.substr(0,tdResults[i].wTeaser.indexOf('.')+1) ) 
+        tdSplit[1].push(tdResults[i].wTeaser.substr(tdResults[i].wTeaser.indexOf('.')+2) ) 
+      }
       
       const ytSearch = await axios.get(youtubeURL).catch(e => console.log('Error: ', e.message));
 
@@ -104,7 +117,8 @@ router.get('/:dataId', (req, res) => { // grab id from url
         streamService: streamService,
         streamLinks: streamLinks,
         ytLink: ytLink,
-        tdResults: tdResults
+        tdResults: tdResults,
+        tdSplit:tdSplit
       }
 
 

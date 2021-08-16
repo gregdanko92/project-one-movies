@@ -4,12 +4,12 @@
 
 
 
-.nav-row{color:white;padding:0 15px; border:solid; border-width:1px 0; max-width: 1140px; min-height: 4rem;}
-.nav-row #logo{margin:14px 0 0 0;}
-.nav-row #logo h1{margin:0; padding:0; font-size:30px; line-height:1; text-transform:uppercase;}
-.row0{padding:80px 0 0 0;
+.nav-row{color:white;padding:0 1rem; border:solid; border-width:1px 0; max-width: 71.25rem; min-height: 4rem;}
+.nav-row #logo{margin:0.875rem 0 0 0;}
+.nav-row #logo h1{margin:0; padding:0; font-size:2rem; line-height:1; text-transform:uppercase;}
+.row0{padding:3rem 0 0 0;
     background-color: #212529;
-    padding-bottom: 80px;}
+    padding-bottom: 3rem;}
 .nav-row{
     display:flex;
     margin: 0 auto;
@@ -60,7 +60,7 @@
   color: rgba(255,255,255,.5);
   position: relative;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .nav a::before,
