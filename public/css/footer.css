@@ -1,4 +1,6 @@
 .page-footer{
+    display: flex;
+    justify-content: flex-end;
     background-color: #212529;
     color:white;
     padding: 10px 0;

@@ -28,11 +28,6 @@ router.get('/new', (req, res) => { //get url path
 })
 /* --------------------------------- create --------------------------------- */
 router.post('/', (req, res) => {
-<<<<<<< HEAD
-  let watchModeID 
-=======
-
->>>>>>> e05b68ca5d633c8e6d330393dc260413f9af1c09
   let searchTerm = req.body.Title
   const searchTitle = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=" + api
   axios.get(searchTitle)
@@ -43,28 +38,6 @@ router.post('/', (req, res) => {
         if (foundMovie) {
           res.send("this already exists") //alert
         }
-<<<<<<< HEAD
-        else{
-          db.Movies.create(temp,(err,createdMovie)=>{
-            if(err) return console.log(err)
-              // res.send('created movie')
-              watchModeId = temp.imdbID
-              res.redirect('/movies')
-          })
-        }
-      })      
-  }).catch((err)=>{
-    console.log("this is error")
-    console.log(err)
-    const streamingSearch = 'https://api.watchmode.com/v1/'+ searchTerm + '/345534/sources/?apiKey=' + apiKey2;
-    axios.get(streamingSearch)
-    .then(data) =>{
-      let temp = w}
-///finish this request of API, then go adjust the movies model to append this data. 
-
-
-  })
-=======
         else {
           db.Movies.create(temp, (err, createdMovie) => {
             if (err) return console.log(err)
@@ -77,7 +50,6 @@ router.post('/', (req, res) => {
       console.log("this is error")
       console.log(err)
     })
->>>>>>> e05b68ca5d633c8e6d330393dc260413f9af1c09
 })
 /* ---------------------------------- show ---------------------------------- */
 router.get('/:dataId', (req, res) => { // grab id from url
