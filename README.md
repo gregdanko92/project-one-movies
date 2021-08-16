@@ -14,33 +14,33 @@ Movio is our first attempt at building a full-stack website. It is a website des
 
 ## Technologies Used
 [Details](#Details)
-
-<table border="0">
- <tr>
-    <td><b style="font-size:30px"></b></td>
-    <td><b style="font-size:30px"></b></td>
- </tr>
- <tr>
-    <td>Express <br>Node.js<br>Axios<br>HTML<br>CSS<br>EJS<br>Bootstrap </td>
-    <td>Dontenv<br>Mongoose<br>MongoDB<br>MVC<br>Rest<br>Git/Github<br>APIS</td>
- </tr>
-</table>
-With the used APIS being:
-
-- OMDB
-- YoutubeApi
-- Watchmode
-- Tastedive
+- Express
+- Node.js
+- Axios
+- HTML
+- CSS
+- EJS
+- Bootstrap
+- Dotenv
+- Mongoose
+- Mongodb
+- MVC 
+- REST
+- Git/Github
+- APIS
+    - OMDB
+    - Youtube
+    - Watchmode
+    - Tastedive
 
 
 ## Existing Features
-- Search for movie
-    - add screenshot links
-- Store and delete movies
-- View movie details
-- Watch movie trailer
-- See available streaming sites
-- See recommnedations based on movie
+- [Search for movie](#Homepage)
+- [Store and delete movies](#Watchlist)
+- [View movie details](#Movie-Details)
+    - Watch movie trailer
+    - See available streaming sites
+    - See recommnedations based on movie
 
 ## Planned Features
 - User functionality through Express Sessions
@@ -49,6 +49,8 @@ With the used APIS being:
     - Share movies
 - About us page
 - Search by genre/directors/etc
+- Additional styling on the movie details page
+- Adjust CSS for multiple screen sizes
 
 
 ## Challenges
@@ -62,9 +64,23 @@ Our project is comprised of three novice web-devlopers with a total of zero hour
 ## Lessons Learned
 
 The largest lession we got from this project was to be more thorough in our API selection. Several days into the project we realized the limitations in our chosen API and given time, would have wanted to use a different one. However as that would require some major refactoring of our code, we decided against it at the time. In the future we would spend a little more time thinking about our desired features and picking an API that would meet those requirements. 
-<!-- --------------------------- things of note ---------------------------- -->
+
 ## Wireframes
+
+![](/resources/wireframe1.png)
+
+![](/resources/wireframe2.png)
+
+![](/resources/wireframe3.png)
+
 ## Screenshots
+### Homepage
+![](/resources/homepage.png)
+### Watchlist (User Index)
+![](/resources/watchlist.png)
+### Movie Details
+![](/resources/show.png)
+
 
 ### Details
 - Axios
