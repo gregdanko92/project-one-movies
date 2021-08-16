@@ -8,6 +8,7 @@ const dotenv = require('dotenv').config()
 const moviesController = require('./controllers/moviesController.js');
 const searchController = require('./controllers/searchController');
 const exampleMovies = require('./models/exampleMovies.js')
+
 /* ------------------------------ Set Variables ----------------------------- */
 const app = express() 
 const port = 4000
@@ -18,6 +19,8 @@ app.use(express.urlencoded({ extended: false }))  //allows req.body to draw form
 app.use('/movies', moviesController); // set the url controller will use
 app.use('/search', searchController);
 app.use(express.static(__dirname + '/public'));
+
+
 /* ------------------------------ Configuration ----------------------------- */
 app.set('view engine', 'ejs'); // changes express default view engine to ejs
 /* ------------------------------- Set Routes ------------------------------- */

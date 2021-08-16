@@ -2,7 +2,13 @@
     background-color: #212529;
     color:white;
     padding: 10px 0;
-    
+    height: 15vh;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    height:100vh;
 }
 .footer-social{
     margin: 0 auto;
@@ -11,7 +17,12 @@
 
 .i{
     color:white;
+    margin:5px;
 }
 #git{
     color: #f4f4f4;
+}
+
+a {
+    text-decoration:none;
 }

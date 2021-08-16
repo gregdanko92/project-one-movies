@@ -28,7 +28,6 @@ router.get('/new', (req, res) => { //get url path
 })
 /* --------------------------------- create --------------------------------- */
 router.post('/', (req, res) => {
-
   let searchTerm = req.body.Title
   const searchTitle = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=" + api
   axios.get(searchTitle)
