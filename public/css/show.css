@@ -1,9 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.cat{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+.details{
+    font-family: 'Open Sans';
+    font-weight: lighter;
+}
+.row0{
+    background-color: #212529;
+}
+.navbar{
+    background-color: #212529;
+}
+.top-wrapper{
+    background-color: #1f1f1f;
+    color:white;
+    padding-bottom: 10px;
+}
+
 .title-header{
     margin:0 auto;
     display:flex;
     width: 60%;
     align-content: space-between;
-
 }
 .left-box{
     display: flex;
@@ -17,7 +41,7 @@ margin-right: 1.5rem;
 display: flex;
 width: 40%;
 flex-direction: row;
-align-items: center;
+
 justify-content: space-between;
 -moz-box-pack: end;
 text-align: center;
@@ -37,6 +61,17 @@ margin-bottom: 1rem;
     display:flex;
     width: 60%;
     align-content: space-between;
+    justify-content: space-between;
+    
+}
+.poster{
+    width:33%;
+    margin-right: 20px;
+}
+iframe {
+    width:66%;
+    align-self: stretch;
+    
 }
 .content-container{
     margin:20px auto;
@@ -44,4 +79,88 @@ margin-bottom: 1rem;
     width: 60%;
     align-content: space-between;
     flex-direction: column;
+    padding-bottom: 50px;
+}
+.genre{
+    border: solid 2px;
+    border-radius: 1rem;
+    border-color:#aeaeae;
+    color:#aeaeae;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding: .25rem .75rem;
+}
+
+.plot{
+    padding-right: 30%;
+    padding: 1rem .75rem;
+    border-bottom: solid 1px #aeaeae;
+}
+
+.listEl{
+    padding-right: 30%;
+    padding: .25rem .75rem;
+    border-bottom: solid 1px #aeaeae;
+    
+}
+
+#detail-btn{
+    margin:0 auto;
+    display:block;
+    max-width: 20%;
+    background-color: #313131;
+    border-color: #1f1f1f;
+    box-shadow: none;
+    
+}
+#detail-btn:active {
+    border-color: #aeaeae;
+    box-shadow: none;
+}
+.last{
+    padding-bottom: 1rem;
+    border-bottom: none;
+}
+.middle-wrapper{
+    width: 100%;
+    
+}
+.awards{
+    
+    padding-left: 0.75rem;
+    border-left: solid 3px #f5c518;
+    font-weight: bold;
+}
+.listEl2{
+    padding-right: 30%;
+    padding: .25rem .75rem;
+    border-bottom: solid 1px #aeaeae;
+}
+.stream-wrapper{
+    width: 100%;
+    background-color: #1f1f1f; 
+    
+    
+}
+.rec-wrapper{
+    width: 100%;
+    background-color: #1f1f1f; 
+     
+}
+.streaming-sources{
+    margin:20px auto;
+    display:flex;
+    width: 60%;
+    align-content: space-between;
+    flex-direction: column;
+    color:white;
+}
+.rec{
+    margin:20px auto;
+    display:flex;
+    width: 60%;
+    align-content: space-between;
+    flex-direction: column;
+    color:white;
 }

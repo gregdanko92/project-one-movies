@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    </style> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/91fe73862f.js" crossorigin="anonymous"></script>
     <script defer src="js/homepage.js"></script>
-    <title>Document</title>
+    
+    <title>MOVIO</title>
 </head>
 <body>
   <div class="bg overlay" id="header-overlay">
@@ -16,7 +22,7 @@
       
     <div id="pageintro">               
       <article>
-        <h3 class="heading">Movie Watchlists</h3>
+        <h3 class="heading">MOVIO</h3>
         <p>Store your watchlists here.</p>
           <footer>
             <form class="d-flex" method="POST" action="/search">
@@ -31,8 +37,11 @@
   </div>
   <div class="wrapper row1">
     <div class="section-title">
-      <h5 class="heading">Search any movie you want</h5>
+      <div>
+        
+      <h2>Search any movie you want</h2>
       <p>Our database is sure to include whatever you're looking for.</p>
+      </div>
     </div>
     <div class="movie-slides-container">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -66,78 +75,42 @@
   <div class="wrapper row2">
     <div id="recommendations" class="horizontal"> 
         <div class="section-title">
-            <h6 class="heading">Need a suggestion?</h6>
+            <h2 >Need a suggestion?</h2>
+            <br>
             <p>Try one of these award-winning movies.</p>
         </div>
-        <div class="img-grid">
-          <div class="row">
+        <div class="grid-wrapper">
+          <div class="grid-body">
+              <% for(let i=0; i < exampleMovies.length; i++) { %>
+                  <% if(exampleMovies[i].Poster==="N/A"
+                      ){exampleMovies[i].Poster="https://westsiderc.org/wp-content/uploads/2019/08/Image-Not-Available.png"
+                      }%>
+                      <div class="card">
+                          <article class="content">
+                              <div class="content-img">
+                                  <form action="/movies" method="POST">
+                                      <input name="Title" type="hidden" value="<%=exampleMovies[i].Title%>">
+                                      <input name="Year" type="hidden" value="<%=exampleMovies[i].Year%>">
+                                      <input name="Type" type="hidden" value="<%=exampleMovies[i].Type%>">
+                                      <input name="Poster" type="hidden" value="<%=exampleMovies[i].Poster%>">
+                                      <input class="movie-img rounded" type="image" src="<%=exampleMovies[i].Poster%>"
+                                          alt="submit">
+                                  </form>
+                              </div>
+                              <div class="context-text">
+                                  <h3 class="title">
+                                      <%=exampleMovies[i].Title%>
+                                  </h3>
+                              </div>
 
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src= <%=exampleMovies[0].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[0].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
-              </div>
-            </div>
+                          </article>
 
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src= <%=exampleMovies[1].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[1].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
-              </div>
-            </div>
+                      </div>
 
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src= <%=exampleMovies[2].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[2].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
-              </div>
-            </div>
-
+                      <%}%>
           </div>
 
-          <div class="row top-buffer">
-
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src= <%=exampleMovies[3].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[3].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src= <%=exampleMovies[4].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[4].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="thumbnail">
-                  <img src= <%=exampleMovies[5].Poster %> class="img-rounded rounded">
-                  <form action="/movies" method="post">
-                    <input type="hidden"  name = "Title" value = "<%=exampleMovies[5].Title%> ">
-                    <input type="submit" value="Add to Watchlist">
-                  </form>
-              </div>
-            </div>
-
-          </div>
-        </div>
+      </div>
         <div class="footer-search">
           <a class="nav-link active" href="/search">Search for more</a>
         </div>             
