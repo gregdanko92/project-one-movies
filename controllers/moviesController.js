@@ -69,6 +69,7 @@ router.get('/:dataId', (req, res) => { // grab id from url
 
       const wmIDSearch = await axios.get(wmIDURL).catch(e => console.log('Error: ', e.message));
       //returns object with stream id and url
+      console.log(wmIDSearch)
 
 
       let streamService = []
