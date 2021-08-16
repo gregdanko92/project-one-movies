@@ -37,9 +37,9 @@ router.post('/', (req, res) => {
       db.Movies.findOne({ imdbID: temp.imdbID }, (err, foundMovie) => {
         if (err) return console.log(err)
         if (foundMovie) {
-          res.send("this already exists") //alert
-        }
-        else {
+          let Error = "This movie is already in your list!"
+          res.render("error.ejs", {error: Error})
+        } else {
           db.Movies.create(temp, (err, createdMovie) => {
             if (err) return console.log(err)
             // res.send('created movie')

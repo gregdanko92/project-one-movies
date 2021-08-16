@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
     .then((data) => {
         temp = data.data.Search
         if (data.data.Response === 'False') {
-            res.send(data.data.Error)
+            res.render("error.ejs", {error: data.data.Error})
         }
          else {
              res.redirect('/search/results')
@@ -27,6 +27,12 @@ router.post('/', (req, res) => {
         
     })
 })
+
+// router.put('/error', (req, res) => {
+//     res.render("./search/error.ejs")
+//     res.redirect('/search/error')
+
+// })
 
 router.get('/results', (req, res) => { 
     res.render('./search/searchResults.ejs', { searchResults: temp }) 
