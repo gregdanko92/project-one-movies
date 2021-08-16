@@ -6,6 +6,7 @@ h4{
 body{
     width:100vw;
     height:100vh;
+    background-color: #f4f4f4;
 }
 p{
     font-family: 'Open Santa', sans-serif;
@@ -39,4 +40,9 @@ html {
 }
 .row1{
     padding-bottom: 20px;
+}
+.page-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

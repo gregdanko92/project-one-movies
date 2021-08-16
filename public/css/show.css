@@ -8,7 +8,7 @@ body{
     font-weight: bolder;
 }
 .details{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
 }
 .row0{
@@ -126,6 +126,9 @@ iframe {
     width: 100%;
     
 }
+.fbt{
+    display:block;
+}
 .awards{
     
     padding-left: 0.75rem;
@@ -157,6 +160,11 @@ iframe {
     width: 60%;
     flex-direction: column;
     color:white;
+    
+}
+.streaming-sources h5{
+    padding: 0 0.75rem;
+    border-bottom: solid 1px  white;
 }
 .link-wrapper{
     display: flex;
@@ -172,4 +180,35 @@ iframe {
     align-content: space-between;
     flex-direction: column;
     color:white;
+}
+.rec-sum-con{
+    display: flex;
+    
+}
+.rec h5{
+    padding: 0 0.75rem;
+    border-bottom: solid 1px  white;
+}
+#sum-btn{
+    display:block;
+    max-width: 5rem;
+    background-color: #313131;
+    border-color: #1f1f1f;
+    box-shadow: none;   
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+#sum-btn:active {   
+    border-color: #aeaeae;
+    box-shadow: none;
+}
+.rec-sum{
+    font-size: 0.8rem;
+    padding-left: 0.75rem;
+    font-family: "Open Sans", sans-serif;
+}
+.rec-box{
+    padding: 0.5rem 0.25rem;
+    border-bottom: 1px solid white;
 }

@@ -184,8 +184,8 @@
       </div>
       <div class="stream-wrapper">
         <div class="streaming-sources">
-          <h2>Where to watch <%=oneMovie.Title%>
-          </h2>
+          <h5>Where to watch <%=oneMovie.Title%>
+          </h5>
           <div class="link-wrapper">
           <%for (let i=0; i < apiData.streamService.length; i++) {%>
             <div class="stream-links">
@@ -197,22 +197,25 @@
       </div>
       <div class="rec-wrapper">
         <div class="rec">
-          <h2>Liked <%=oneMovie.Title%>? Try these:</h2>
-          <% for(let i=0;i<apiData.tdResults.length;i++){ %>
-            <h3 class="rec-title">
+          <h5>Liked <%=oneMovie.Title%>? Try these:</h5>
+          <% for(let i=0;i<5;i++){ %>
+            <div class="rec-box">            
+            <h6 class="rec-title">
               <%=apiData.tdResults[i].Name%>
-            </h3>
-            <span class="rec-sum">
+            </h6>
+            <span class="rec-sum fbt">
               <%=apiData.tdSplit[0][i]%>
             </span> 
             <span class="collapse rec-sum" id="collapseExample<%=i%>">
               <%=apiData.tdSplit[1][i]%></span>
             <div class="rec-sum-con">
-              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample<%=i%>" role="button" aria-expanded="false" aria-controls="collapseExample" id="detail-btn">
+              <a class=" btn btn-primary" data-bs-toggle="collapse" href="#collapseExample<%=i%>" role="button" aria-expanded="false" aria-controls="collapseExample" id="sum-btn">
                 Show all
               </a>
             </div>
+          </div>
            <%}%>
+          
            </div>
       </div>
       
