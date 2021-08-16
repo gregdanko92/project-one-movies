@@ -24,8 +24,8 @@ router.get('/new', (req, res) => { //get url path
     res.render('./movies/new.ejs') //render our new page
   }) 
 /* --------------------------------- create --------------------------------- */
-router.post('/', (req, res) => { 
-
+router.post('/', (req, res) => {
+  let watchModeID 
   let searchTerm = req.body.Title
   const searchTitle = "https://www.omdbapi.com/?t="+searchTerm+"&apikey="+api
   axios.get(searchTitle)
@@ -40,6 +40,7 @@ router.post('/', (req, res) => {
           db.Movies.create(temp,(err,createdMovie)=>{
             if(err) return console.log(err)
               // res.send('created movie')
+              watchModeId = temp.imdbID
               res.redirect('/movies')
           })
         }
@@ -47,6 +48,13 @@ router.post('/', (req, res) => {
   }).catch((err)=>{
     console.log("this is error")
     console.log(err)
+    const streamingSearch = 'https://api.watchmode.com/v1/'+ searchTerm + '/345534/sources/?apiKey=' + apiKey2;
+    axios.get(streamingSearch)
+    .then(data) =>{
+      let temp = w}
+///finish this request of API, then go adjust the movies model to append this data. 
+
+
   })
 })
 /* ---------------------------------- show ---------------------------------- */
