@@ -1,2 +1,2 @@
-const forms = querySelectorAll('form')
+const forms = document.querySelectorAll('form')
 console.log(forms)
