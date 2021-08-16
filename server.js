@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
     
     res.render('homepage.ejs', {exampleMovies: exampleMovies});
 })
+app.get('/construction', (req, res) => {
+    
+    res.render('construction.ejs');
+})
 /* ------------------------------ Start Server ------------------------------ */
 app.listen(process.env.PORT || 4000, () => {
     console.log(`Example app listening at http://localhost:${port}`);
