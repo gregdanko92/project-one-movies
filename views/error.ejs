@@ -23,9 +23,9 @@
 
 <body>
     <%- include('./partials/navbar.ejs') %>
-        <div class="title-wrapper">
+        <div class="messages">
             <div class="title">
-                <h1> ERROR! </h1>
+                <h1> ERROR: </h1>
             </div>
 
             <div class="error">
@@ -34,30 +34,20 @@
                 </h2>
             </div>
 
-            <div class="newSearch">
-                <form class="d-flex" method="POST" action="/search">
-                    <label for="search"></label>
-                    <input class="form-control me-2" type="search" placeholder="New Search?" aria-label="Search" name="search">
-                    <button class="btn btn-outline-success home-search" type="submit">Search</button>
-                </form>
+            <div id="image">
+                <img src="/image/legit-goose.png">
             </div>
-            
-            <div class="options">
-                <script>
-                    document.write('<a href="' + document.referrer + '">Go Back</a>');
-                </script>
-            </div>
+        </div>
+
 
             <%- include('./partials/footer.ejs') %>
 
-
-
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-                    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
-                    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
-                    crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+            integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+            integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+            crossorigin="anonymous"></script>
 
 
 </body>

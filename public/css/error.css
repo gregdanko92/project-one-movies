@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color:#F4F4F4; 
+}
+
+.messages {
+    margin: 9.6em;
+    display: grid;
+    
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-weight: 300;   
+    background-color:#F4F4F4;
+}
+
+.error {
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-weight: 300;  
+}
+
+#image {
+    size: 10em;
+    right: 90%;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
