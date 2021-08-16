@@ -181,8 +181,8 @@
           </div>
         </div>
       </div>
-      <div class="bottom-wrapper">
-        <div class="streaming-sources" style="color:white">
+      <div class="stream-wrapper">
+        <div class="streaming-sources">
           <h2>Where to watch <%=oneMovie.Title%>
           </h2>
           <%for (let i=0; i < apiData.streamService.length; i++) {%>
@@ -191,6 +191,8 @@
             </div>
             <%}%>
         </div>
+      </div>
+      <div class="rec-wrapper">
         <div class="rec">
           <h2>Liked <%=oneMovie.Title%>? Try these:</h2>
           <% for(let i=0;i<apiData.tdResults.length;i++){ %>
@@ -210,8 +212,10 @@
             </div> -->
             <%}%>
         </div>
-
       </div>
+
+
+
       <%- include('../partials/footer.ejs') %>
 
 
