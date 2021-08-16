@@ -67,7 +67,7 @@ The largest lession we got from this project was to be more thorough in our API 
 
 ## Wireframes
 
-![](/resources/wireframe .png)
+![](/resources/wireframe1.png)
 
 ![](/resources/wireframe2.png)
 
