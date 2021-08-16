@@ -126,11 +126,6 @@ iframe {
     width: 100%;
     
 }
-.bottom-wrapper{
-    width: 100%;
-    background-color: #1f1f1f; 
-    height: 300px;   
-}
 .awards{
     
     padding-left: 0.75rem;
@@ -141,4 +136,31 @@ iframe {
     padding-right: 30%;
     padding: .25rem .75rem;
     border-bottom: solid 1px #aeaeae;
+}
+.stream-wrapper{
+    width: 100%;
+    background-color: #1f1f1f; 
+    
+    
+}
+.rec-wrapper{
+    width: 100%;
+    background-color: #1f1f1f; 
+     
+}
+.streaming-sources{
+    margin:20px auto;
+    display:flex;
+    width: 60%;
+    align-content: space-between;
+    flex-direction: column;
+    color:white;
+}
+.rec{
+    margin:20px auto;
+    display:flex;
+    width: 60%;
+    align-content: space-between;
+    flex-direction: column;
+    color:white;
 }

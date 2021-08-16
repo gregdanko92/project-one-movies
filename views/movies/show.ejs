@@ -39,33 +39,40 @@
               <div class="right-box">
                 <div class="left-col">
                   <div> IMDb</div>
-                  <%if (typeof oneMovie.Ratings[0] != 'undefined') {%>
-                  <div>
-                    <%= oneMovie.Ratings[0].Value %>
-                  </div>
-                  <%} else { %><div>N/A</div> <% } %>
+                  <%if (typeof oneMovie.Ratings[0] !='undefined' ) {%>
+                    <div>
+                      <%= oneMovie.Ratings[0].Value %>
+                    </div>
+                    <%} else { %>
+                      <div>N/A</div>
+                      <% } %>
                 </div>
                 <div class="center-col">
                   <div>Rotten Tomatoes</div>
-                  <%if (typeof oneMovie.Ratings[1] != 'undefined') {%>
-                  <div>
-                    <%= oneMovie.Ratings[1].Value %>
-                  </div>
-                  <%} else { %><div>N/A</div> <% } %>
+                  <%if (typeof oneMovie.Ratings[1] !='undefined' ) {%>
+                    <div>
+                      <%= oneMovie.Ratings[1].Value %>
+                    </div>
+                    <%} else { %>
+                      <div>N/A</div>
+                      <% } %>
                 </div>
                 <div class="right-col">
                   <div>Metacritic</div>
-                  <%if (typeof oneMovie.Ratings[2] != 'undefined') {%>
-                  <div>
-                    <%= oneMovie.Ratings[2].Value %>
-                  </div>
-                  <%} else { %><div>N/A</div> <% } %>
+                  <%if (typeof oneMovie.Ratings[2] !='undefined' ) {%>
+                    <div>
+                      <%= oneMovie.Ratings[2].Value %>
+                    </div>
+                    <%} else { %>
+                      <div>N/A</div>
+                      <% } %>
                 </div>
               </div>
             </div>
             <div class="poster-container">
               <img class="poster rounded" src="<%= oneMovie.Poster %>" alt="">
-              <iframe src="https://www.youtube.com/embed/FR3i0qKzRvg" title="YouTube video player" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/<%=apiData.ytLink%>" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
               <!-- ------------------------------ =ytID%> ------------------------------ -->
@@ -84,16 +91,22 @@
                 <%=oneMovie.Plot%>
               </div>
               <div class="listEl first"><span class="cat">Director: </span>
-                <span class="details"></span><%= oneMovie.Director %>
+                <span class="details"></span>
+                <%= oneMovie.Director %>
               </div>
               <div class="listEl first"><span class="cat">Writer: </span>
-                <span class="details"><%=oneMovie.Writer%></span>
+                <span class="details">
+                  <%=oneMovie.Writer%>
+                </span>
               </div>
               <div class="listEl first last"><span class="cat">Actors: </span>
-                <span class="details"><%= oneMovie.Actors %></span>
+                <span class="details">
+                  <%= oneMovie.Actors %>
+                </span>
               </div>
               <div class="detail-btn">
-                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="detail-btn">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                  aria-expanded="false" aria-controls="collapseExample" id="detail-btn">
                   Show All
                 </a>
               </div>
@@ -109,44 +122,100 @@
                 <%=oneMovie.Awards%>
               </h3>
             </div>
-            <div class="listEl2">Title: <span class="details"><%= oneMovie.Title %></span>
+            <div class="listEl2">Title: <span class="details">
+                <%= oneMovie.Title %>
+              </span>
             </div>
-            <div class="listEl2">Director: <span class="details"><%=oneMovie.Director%></span>
+            <div class="listEl2">Director: <span class="details">
+                <%=oneMovie.Director%>
+              </span>
             </div>
-            <div class="listEl2 ">Writer: <span class="details"><%= oneMovie.Writer %></span>
+            <div class="listEl2 ">Writer: <span class="details">
+                <%= oneMovie.Writer %>
+              </span>
             </div>
-            <div class="listEl2">Genre: <span class="details"><%= oneMovie.Genre %></span>
+            <div class="listEl2">Genre: <span class="details">
+                <%= oneMovie.Genre %>
+              </span>
             </div>
-            <div class="listEl2">Actors: <span class="details"><%=oneMovie.Actors%></span>
+            <div class="listEl2">Actors: <span class="details">
+                <%=oneMovie.Actors%>
+              </span>
             </div>
-            <div class="listEl2 ">Released: <span class="details"><%= oneMovie.Released %></span>
+            <div class="listEl2 ">Released: <span class="details">
+                <%= oneMovie.Released %>
+              </span>
             </div>
-            <div class="listEl2">Rated: <span class="details"><%= oneMovie.Rated %></span>
+            <div class="listEl2">Rated: <span class="details">
+                <%= oneMovie.Rated %>
+              </span>
             </div>
-            <div class="listEl2">Runtime: <span class="details"><%=oneMovie.Runtime%></span>
+            <div class="listEl2">Runtime: <span class="details">
+                <%=oneMovie.Runtime%>
+              </span>
             </div>
-            <div class="listEl2 ">Language: <span class="details"><%= oneMovie.Language %></span>
+            <div class="listEl2 ">Language: <span class="details">
+                <%= oneMovie.Language %>
+              </span>
             </div>
-            <div class="listEl2">Country: <span class="details"><%= oneMovie.Country %></span>
+            <div class="listEl2">Country: <span class="details">
+                <%= oneMovie.Country %>
+              </span>
             </div>
-            <div class="listEl2">DVD Release Date: <span class="details"><%=oneMovie.DVD%></span>
+            <div class="listEl2">DVD Release Date: <span class="details">
+                <%=oneMovie.DVD%>
+              </span>
             </div>
-            <div class="listEl2">BoxOffice: <span class="details"><%= oneMovie.BoxOffice %></span>
+            <div class="listEl2">BoxOffice: <span class="details">
+                <%= oneMovie.BoxOffice %>
+              </span>
             </div>
-            <div class="listEl2">Production: <span class="details"><%=oneMovie.Production%></span>
+            <div class="listEl2">Production: <span class="details">
+                <%=oneMovie.Production%>
+              </span>
             </div>
-            <div class="listEl2 last">Website: <span class="details"><%= oneMovie.Website %></span>
+            <div class="listEl2 last">Website: <span class="details">
+                <%= oneMovie.Website %>
+              </span>
             </div>
           </div>
         </div>
       </div>
-      <div class="bottom-wrapper">
+      <div class="stream-wrapper">
         <div class="streaming-sources">
-          <h2>Where to watch <%=oneMovie.Title%></h2>
-
+          <h2>Where to watch <%=oneMovie.Title%>
+          </h2>
+          <%for (let i=0; i < apiData.streamService.length; i++) {%>
+            <div class="stream-links">
+              <a href=<%=apiData.streamLinks[i].web_url%>> <%=apiData.streamService[i].name%></a>
+            </div>
+            <%}%>
         </div>
-
       </div>
+      <div class="rec-wrapper">
+        <div class="rec">
+          <h2>Liked <%=oneMovie.Title%>? Try these:</h2>
+          <% for(let i=0;i<apiData.tdResults.length;i++){ %>
+            <h3 class="rec-title">
+              <%=apiData.tdResults[i].Name%>
+            </h3>
+            <p class="rec-sum">
+              <%=apiData.tdResults[i].wTeaser%>
+            </p>
+            <!-- <div class="rec-sum-con">
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample%=i%>" role="button" aria-expanded="false" aria-controls="collapseExample" id="detail-btn">
+                See summary
+              </a>
+            </div>
+            <div class="collapse" id="collapseExample %=i%>">
+              <p class="rec-sum"> %=apiData.tdResults.wTeaser%></p>
+            </div> -->
+            <%}%>
+        </div>
+      </div>
+
+
+
       <%- include('../partials/footer.ejs') %>
 
 
